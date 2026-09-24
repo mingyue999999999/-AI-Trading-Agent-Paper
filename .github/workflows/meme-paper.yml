@@ -1,0 +1,75 @@
+name: 链上Meme机器人模拟交易
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/meme-paper.yml"
+      - "链上Meme/**"
+      - ".github/scripts/check_schedule_config.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/meme-paper.yml"
+      - "链上Meme/链上Meme机器人.py"
+      - "链上Meme/new_launch_shadow.py"
+      - "链上Meme/run_new_launch_shadow.py"
+      - "链上Meme/外部信号复核.py"
+      - "链上Meme/gate_diagnostics.py"
+      - "链上Meme/test_gate_diagnostics.py"
+      - "链上Meme/test_external_evidence.py"
+      - "链上Meme/test_meme_bot.py"
+      - "链上Meme/test_new_launch_shadow.py"
+      - "链上Meme/test_profile_coverage.py"
+      - ".github/scripts/check_schedule_config.py"
+      - ".github/heartbeat/meme.txt"
+  schedule:
+    - cron: "17,47 * * * *"
+      timezone: "Etc/UTC"
+permissions:
+  contents: write
+concurrency:
+  group: meme-paper-final
+  cancel-in-progress: false
+jobs:
+  meme-paper:
+    name: 链上Meme机器人
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Resolve main after the concurrency lock; PRs retain their test SHA.
+          ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: 调度配置检查
+        run: python ".github/scripts/check_schedule_config.py"
+      - name: 语法和安全测试
+        run: |
+          python -m py_compile "链上Meme/链上Meme机器人.py" "链上Meme/new_launch_shadow.py" "链上Meme/run_new_launch_shadow.py" "链上Meme/外部信号复核.py" "链上Meme/test_external_evidence.py" "链上Meme/test_meme_bot.py" "链上Meme/test_new_launch_shadow.py"
+          python -m unittest "链上Meme/test_meme_bot.py" -v
+          python -m unittest "链上Meme/test_new_launch_shadow.py" -v
+          python -m unittest "链上Meme/test_external_evidence.py" -v
+          python -m unittest "链上Meme/test_gate_diagnostics.py" -v
+          python -m unittest discover -s "链上Meme" -p test_profile_coverage.py -v
+          if grep -RE "(private[_-]?key|seed phrase|create_order|sendTransaction|sign_transaction)" "链上Meme"; then exit 1; fi
+      - name: 运行链上Meme基准机器人
+        run: python "链上Meme/链上Meme机器人.py"
+      - name: 运行新币影子挑战者
+        run: python "链上Meme/run_new_launch_shadow.py"
+      - name: 保存模拟账户
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && success()
+        run: |
+          if [ -z "$(git status --porcelain -- "链上Meme/模拟账户.json" "链上Meme/新币影子账户.json" "链上Meme/候选复核报告.json" "链上Meme/基准候选诊断.json" "链上Meme/候选跟踪.json" "链上Meme/流动性8对照账户.json" "链上Meme/流动性5对照账户.json" "链上Meme/诊断历史")" ]; then exit 0; fi
+          git config user.name "Meme Paper Bot"
+          git config user.email "actions@github.com"
+          git add "链上Meme/模拟账户.json" "链上Meme/新币影子账户.json" "链上Meme/候选复核报告.json" "链上Meme/基准候选诊断.json" "链上Meme/候选跟踪.json" "链上Meme/流动性8对照账户.json" "链上Meme/流动性5对照账户.json" "链上Meme/诊断历史"
+          git commit -m "更新链上Meme及新币影子账户"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          exit 1
