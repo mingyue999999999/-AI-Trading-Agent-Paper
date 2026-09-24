@@ -1,0 +1,57 @@
+name: PAPER账户独立估值快照
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5,35 * * * *"
+  workflow_run:
+    workflows:
+      - "现货机器人模拟交易"
+      - "合约机器人模拟交易"
+      - "稳健多策略量化机器人-模拟"
+      - "链上Meme机器人模拟交易"
+      - "Polymarket套利机器人模拟交易"
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "scripts/refresh_paper_valuations.py"
+      - ".github/workflows/valuation-snapshot.yml"
+      - ".github/heartbeat/valuation.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-valuation-snapshot
+  cancel-in-progress: false
+
+jobs:
+  valuation:
+    if: (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main') || (github.event_name != 'workflow_run' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: 刷新PAPER账户估值
+        run: python scripts/refresh_paper_valuations.py
+      - name: 保存估值快照
+        run: |
+          git config user.name "Paper Valuation Bot"
+          git config user.email "actions@github.com"
+          git add "state/valuations/latest.json"
+          git diff --cached --quiet && exit 0
+          git commit -m "更新PAPER独立估值快照"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo "估值快照未能可靠写回"
+          exit 1
