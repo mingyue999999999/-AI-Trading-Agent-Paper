@@ -1,0 +1,108 @@
+name: 合约机器人模拟交易
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/futures-paper.yml"
+      - ".github/scripts/check_schedule_config.py"
+      - ".github/heartbeat/futures.txt"
+      - "合约/合约机器人.py"
+      - "合约/资金费率基差实验.py"
+      - "合约/test_basis_static.py"
+      - "execution_quality.py"
+      - "paper_runtime.py"
+      - "test_paper_runtime.py"
+      - "state_guard.py"
+      - "test_execution_quality.py"
+      - "合约/test_v5_static.py"
+      - "requirements.txt"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/futures-paper.yml"
+      - ".github/scripts/check_schedule_config.py"
+      - ".github/heartbeat/futures.txt"
+      - "合约/合约机器人.py"
+      - "合约/资金费率基差实验.py"
+      - "合约/test_basis_static.py"
+      - "execution_quality.py"
+      - "paper_runtime.py"
+      - "test_paper_runtime.py"
+      - "state_guard.py"
+      - "test_execution_quality.py"
+      - "合约/test_v5_static.py"
+      - "requirements.txt"
+  schedule:
+    - cron: "12,42 * * * *"
+      timezone: "Etc/UTC"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: futures-paper-trading-final
+  cancel-in-progress: false
+
+jobs:
+  futures-paper:
+    name: 合约机器人
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Resolve main after the concurrency lock; PRs retain their test SHA.
+          ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+      - name: 调度配置检查
+        run: python ".github/scripts/check_schedule_config.py"
+      - name: 语法检查
+        run: python -m py_compile "合约/合约机器人.py" "合约/资金费率基差实验.py" "合约/test_v5_static.py" "合约/test_basis_static.py" "execution_quality.py" "test_execution_quality.py"
+      - name: 静态安全检查
+        run: python "合约/test_v5_static.py"
+      - name: Funding基差静态安全检查
+        run: python "合约/test_basis_static.py"
+      - name: 订单流确认单元测试
+        run: python "test_execution_quality.py"
+      - name: 跨模块风险与账本回归测试
+        run: python -m unittest test_paper_runtime -v
+      - name: 现有账户完整性预检
+        id: preflight
+        run: python state_guard.py capture .paper-preflight-futures.json "合约/模拟账户.json" "合约/阈值挑战者账户.json" "合约/资金费率基差账户.json"
+      - name: 运行合约机器人
+        run: python "合约/合约机器人.py"
+      - name: 运行低阈值挑战者
+        env:
+          FUTURES_CHALLENGER_MODE: "1"
+        run: python "合约/合约机器人.py"
+      - name: 运行Funding基差中性实验
+        run: python "合约/资金费率基差实验.py"
+      - name: 保存合约模拟账户
+        if: always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.preflight.outcome == 'success'
+        run: |
+          python state_guard.py verify .paper-preflight-futures.json
+          if [ -z "$(git status --porcelain -- "合约/模拟账户.json" "合约/持仓量记录.json" "合约/阈值挑战者账户.json" "合约/阈值挑战者持仓量记录.json" "合约/资金费率基差账户.json")" ]; then exit 0; fi
+          git config user.name "Futures Paper Bot"
+          git config user.email "actions@github.com"
+          git add "合约/模拟账户.json"
+          if [ -f "合约/持仓量记录.json" ]; then git add "合约/持仓量记录.json"; fi
+          if [ -f "合约/阈值挑战者账户.json" ]; then git add "合约/阈值挑战者账户.json"; fi
+          if [ -f "合约/阈值挑战者持仓量记录.json" ]; then git add "合约/阈值挑战者持仓量记录.json"; fi
+          if [ -f "合约/资金费率基差账户.json" ]; then git add "合约/资金费率基差账户.json"; fi
+          git commit -m "更新合约模拟账户"
+          for attempt in 1 2 3; do
+            # 同账户冲突必须失败并保留证据，不能静默舍弃本轮账本后报告成功
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "账户保存推送冲突，第 $attempt 次重试"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo "账户状态未能可靠推送，任务失败以避免假成功"
+          exit 1
