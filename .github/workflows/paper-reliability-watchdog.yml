@@ -1,0 +1,44 @@
+name: PAPER核心可靠性看门狗
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/paper-reliability-watchdog.yml"
+      - ".github/scripts/paper_reliability_watchdog.py"
+  schedule:
+    - cron: "20,50 * * * *"
+      timezone: "Etc/UTC"
+  workflow_run:
+    workflows:
+      - "PAPER账户独立估值快照"
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: paper-core-reliability-watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 检查并串行恢复核心PAPER组件
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python ".github/scripts/paper_reliability_watchdog.py"
