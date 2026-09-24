@@ -1,0 +1,45 @@
+name: 稳健多策略量化机器人-模拟
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/quant-paper.yml"
+      - ".github/heartbeat/quant.txt"
+      - "量化/**"
+  schedule:
+    - cron: "22,52 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: robust-multi-strategy-paper
+  cancel-in-progress: false
+jobs:
+  paper:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Resolve main after the concurrency lock; PRs retain their test SHA.
+          ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - run: cd 量化 && python -m unittest discover -s tests -v
+      - run: cd 量化 && python bot.py paper
+      - name: 保存模拟账户
+        run: |
+          git config user.name "Robust Quant Paper Bot"
+          git config user.email "actions@github.com"
+          git add 量化/state/
+          git diff --cached --quiet && exit 0
+          git commit -m "Update robust quant paper state"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "账户保存推送冲突，第 $attempt 次重试"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo "量化账户状态未能可靠推送，任务失败以避免假成功"
+          exit 1
