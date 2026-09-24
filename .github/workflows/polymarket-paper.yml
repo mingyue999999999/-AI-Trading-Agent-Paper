@@ -1,0 +1,56 @@
+name: Polymarket套利机器人模拟交易
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "2,32 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "Polymarket套利机器人/**"
+      - ".github/workflows/polymarket-paper.yml"
+      - ".github/heartbeat/polymarket.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: polymarket-paper
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Resolve main after the concurrency lock; PRs retain their test SHA.
+          ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Safety and unit tests
+        working-directory: Polymarket套利机器人
+        run: python -m unittest discover -s tests -v
+      - name: Run public-data paper simulator
+        working-directory: Polymarket套利机器人
+        run: python bot.py
+      - name: Persist paper state and reports
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "Polymarket套利机器人/state"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore: update Polymarket paper state [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "账户保存推送冲突，第 $attempt 次重试"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo "Polymarket账户状态未能可靠推送，任务失败以避免假成功"
+          exit 1
