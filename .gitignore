@@ -1,0 +1,46 @@
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets.*
+credentials.*
+private_key*
+wallet*
+mnemonic*
+seed*
+*.sqlite
+*.db
+
+# Python/runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local logs and temp artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+coverage.xml
+htmlcov/
+
+# Local-only exports
+private_export/
+local_state/
