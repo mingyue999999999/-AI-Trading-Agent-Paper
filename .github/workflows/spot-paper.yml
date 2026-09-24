@@ -1,0 +1,92 @@
+name: 现货机器人模拟交易
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/spot-paper.yml"
+      - ".github/scripts/check_schedule_config.py"
+      - ".github/heartbeat/spot.txt"
+      - "现货/现货机器人.py"
+      - "execution_quality.py"
+      - "paper_runtime.py"
+      - "test_paper_runtime.py"
+      - "state_guard.py"
+      - "test_execution_quality.py"
+      - "现货/test_static.py"
+      - "requirements.txt"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/spot-paper.yml"
+      - ".github/scripts/check_schedule_config.py"
+      - ".github/heartbeat/spot.txt"
+      - "现货/现货机器人.py"
+      - "execution_quality.py"
+      - "paper_runtime.py"
+      - "test_paper_runtime.py"
+      - "state_guard.py"
+      - "test_execution_quality.py"
+      - "现货/test_static.py"
+      - "requirements.txt"
+  schedule:
+    - cron: "7,37 * * * *"
+      timezone: "Etc/UTC"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spot-paper-trading-final
+  cancel-in-progress: false
+
+jobs:
+  spot-paper:
+    name: 现货机器人
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Resolve main after the concurrency lock; PRs retain their test SHA.
+          ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+      - name: 调度配置检查
+        run: python ".github/scripts/check_schedule_config.py"
+      - name: 语法检查
+        run: python -m py_compile "现货/现货机器人.py" "现货/test_static.py" "execution_quality.py" "test_execution_quality.py"
+      - name: 静态安全检查
+        run: python "现货/test_static.py"
+      - name: 订单流确认单元测试
+        run: python "test_execution_quality.py"
+      - name: 跨模块风险与账本回归测试
+        run: python -m unittest test_paper_runtime -v
+      - name: 现有账户完整性预检
+        id: preflight
+        run: python state_guard.py capture .paper-preflight-spot.json "现货/模拟账户.json"
+      - name: 运行现货机器人
+        run: python "现货/现货机器人.py"
+      - name: 保存现货模拟账户
+        if: always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.preflight.outcome == 'success'
+        run: |
+          python state_guard.py verify .paper-preflight-spot.json
+          if [ -z "$(git status --porcelain -- "现货/模拟账户.json" "现货/持仓量记录.json")" ]; then exit 0; fi
+          git config user.name "Spot Paper Bot"
+          git config user.email "actions@github.com"
+          git add "现货/模拟账户.json"
+          if [ -f "现货/持仓量记录.json" ]; then git add "现货/持仓量记录.json"; fi
+          git commit -m "更新现货模拟账户"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "账户保存推送冲突，第 $attempt 次重试"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo "账户状态未能可靠推送，任务失败以避免假成功"
+          exit 1
