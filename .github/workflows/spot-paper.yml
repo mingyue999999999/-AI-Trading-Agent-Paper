@@ -2,19 +2,6 @@ name: 现货机器人模拟交易
 
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - ".github/workflows/spot-paper.yml"
-      - ".github/scripts/check_schedule_config.py"
-      - ".github/heartbeat/spot.txt"
-      - "现货/现货机器人.py"
-      - "execution_quality.py"
-      - "paper_runtime.py"
-      - "test_paper_runtime.py"
-      - "state_guard.py"
-      - "test_execution_quality.py"
-      - "现货/test_static.py"
-      - "requirements.txt"
   push:
     branches:
       - main
