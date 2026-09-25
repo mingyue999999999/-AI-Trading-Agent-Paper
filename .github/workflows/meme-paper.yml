@@ -1,11 +1,6 @@
 name: 链上Meme机器人模拟交易
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - ".github/workflows/meme-paper.yml"
-      - "链上Meme/**"
-      - ".github/scripts/check_schedule_config.py"
   push:
     branches: [main]
     paths:
