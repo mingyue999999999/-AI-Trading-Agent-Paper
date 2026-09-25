@@ -591,7 +591,7 @@
   "funding_pnl": -3.15770905756692,
   "liquidations": 0,
   "peak_equity": 10254.824578775837,
-  "last_equity": 10126.429441352235,
+  "last_equity": 10103.026397881464,
   "consecutive_losses": 3,
   "cooldown_until": "2026-09-24T16:01:19+00:00",
   "daily": {
@@ -1969,7 +1969,56 @@
         "price_epoch_ms": 1790338316606,
         "base_units_per_contract": 0.01
       },
-      "outcomes": {},
+      "outcomes": {
+        "5m": {
+          "price": 84100.0,
+          "price_epoch_ms": 1790338560000,
+          "candle_open_epoch_ms": 1790338500000,
+          "target_epoch_ms": 1790338616000,
+          "lag_seconds": 56.0,
+          "source": "OKX:BTC-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.5428750677780814,
+          "reference_epoch_ms": 1790338316606,
+          "settled_at": "2026-09-25T15:33:23+00:00",
+          "observed_after_minutes": 201.45,
+          "ab_eligible": true
+        },
+        "15m": {
+          "price": 84257.9,
+          "price_epoch_ms": 1790339160000,
+          "candle_open_epoch_ms": 1790339100000,
+          "target_epoch_ms": 1790339216000,
+          "lag_seconds": 56.0,
+          "source": "OKX:BTC-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.35614165485540195,
+          "reference_epoch_ms": 1790338316606,
+          "settled_at": "2026-09-25T15:33:23+00:00",
+          "observed_after_minutes": 201.45,
+          "ab_eligible": true
+        },
+        "30m": {
+          "price": 84453.0,
+          "price_epoch_ms": 1790340060000,
+          "candle_open_epoch_ms": 1790340000000,
+          "target_epoch_ms": 1790340116000,
+          "lag_seconds": 56.0,
+          "source": "OKX:BTC-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.12541531627898728,
+          "reference_epoch_ms": 1790338316606,
+          "settled_at": "2026-09-25T15:33:23+00:00",
+          "observed_after_minutes": 201.45,
+          "ab_eligible": true
+        }
+      },
       "mode": "shadow",
       "evaluation_reference": {
         "price": 84559.05,
@@ -2006,7 +2055,56 @@
         "price_epoch_ms": 1790338320003,
         "base_units_per_contract": 0.1
       },
-      "outcomes": {},
+      "outcomes": {
+        "5m": {
+          "price": 2692.31,
+          "price_epoch_ms": 1790338620000,
+          "candle_open_epoch_ms": 1790338560000,
+          "target_epoch_ms": 1790338620000,
+          "lag_seconds": 0.0,
+          "source": "OKX:ETH-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.9803362676606753,
+          "reference_epoch_ms": 1790338320003,
+          "settled_at": "2026-09-25T15:33:24+00:00",
+          "observed_after_minutes": 201.38333333333333,
+          "ab_eligible": true
+        },
+        "15m": {
+          "price": 2707.28,
+          "price_epoch_ms": 1790339220000,
+          "candle_open_epoch_ms": 1790339160000,
+          "target_epoch_ms": 1790339220000,
+          "lag_seconds": 0.0,
+          "source": "OKX:ETH-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.42975911789964183,
+          "reference_epoch_ms": 1790338320003,
+          "settled_at": "2026-09-25T15:33:24+00:00",
+          "observed_after_minutes": 201.38333333333333,
+          "ab_eligible": true
+        },
+        "30m": {
+          "price": 2714.0,
+          "price_epoch_ms": 1790340120000,
+          "candle_open_epoch_ms": 1790340060000,
+          "target_epoch_ms": 1790340120000,
+          "lag_seconds": 0.0,
+          "source": "OKX:ETH-USDT-SWAP:1m:closed",
+          "method": "last_closed_minute_at_or_before_target",
+          "valid": true,
+          "label_version": 2,
+          "directional_return_pct": -0.18260624906903944,
+          "reference_epoch_ms": 1790338320003,
+          "settled_at": "2026-09-25T15:33:24+00:00",
+          "observed_after_minutes": 201.38333333333333,
+          "ab_eligible": true
+        }
+      },
       "mode": "shadow",
       "evaluation_reference": {
         "price": 2718.965,
@@ -2020,33 +2118,33 @@
   "max_observed_drawdown": 0.023139287549158616,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-25T12:12:09.298000+00:00",
-    "valuation_epoch_ms": 1790338329298,
+    "valuation_at": "2026-09-25T15:33:23.243000+00:00",
+    "valuation_epoch_ms": 1790350403243,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "SOL": {
         "available": true,
-        "reference_mid": 120.4,
-        "price_epoch_ms": 1790338328820,
+        "reference_mid": 120.25,
+        "price_epoch_ms": 1790350402762,
         "source": "OKX:mark-price"
       },
       "BNB": {
         "available": true,
-        "reference_mid": 779.2,
-        "price_epoch_ms": 1790338329012,
+        "reference_mid": 774.3,
+        "price_epoch_ms": 1790350402974,
         "source": "OKX:mark-price"
       },
       "BTC": {
         "available": true,
-        "reference_mid": 84559.1,
-        "price_epoch_ms": 1790338329207,
+        "reference_mid": 83784.4,
+        "price_epoch_ms": 1790350403158,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10126.429441352235,
+    "equity": 10103.026397881464,
     "not_realtime": true,
-    "current_drawdown": 0.012520461606855604,
+    "current_drawdown": 0.014802611173724611,
     "max_observed_drawdown": 0.023139287549158616,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
