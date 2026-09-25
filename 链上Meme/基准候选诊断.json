@@ -1,84 +1,282 @@
 {
-  "time": "2026-09-25T01:34:37+00:00",
+  "time": "2026-09-25T06:37:41+00:00",
   "mode": "PAPER_ONLY_BASE_DIAGNOSTICS",
   "seed_count": 30,
   "seed_limit": 30,
-  "reviewed": 20,
+  "reviewed": 18,
   "accepted_for_watch": 0,
   "reviews": [
     {
-      "key": "solana:8vbDkUJbvRwkYDoGnmmvrmdqmJpKUbkHrP5bV3ptpump",
-      "symbol": "UP",
+      "key": "solana:9aeLpX3p4xxbZZVs5RPHXbYM3LYGAzc7wTDPvu9Ti3Ha",
+      "symbol": "GRAILS",
       "metrics": {
-        "price": 1.192e-05,
+        "price": 7.439e-05,
+        "liquidity": 22921.94,
+        "fdv": 74394.0,
+        "volume24": 250681.56,
+        "buys": 3346.0,
+        "sells": 2716.0,
+        "h1": 58.03,
+        "h24": 58.03,
+        "age_h": 0.38529910001489853,
+        "liq_fdv": 0.3081154394171573
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/5cnapaswfynaw911gmquyqpz9p5yyk416t59ki3leg3q",
+        "pairAddress": "5cNAPAsWFynaW911GMquyQPZ9p5YYK416t59ki3LEg3Q",
+        "baseToken": {
+          "address": "9aeLpX3p4xxbZZVs5RPHXbYM3LYGAzc7wTDPvu9Ti3Ha",
+          "name": "Grails",
+          "symbol": "GRAILS"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.0000006394",
+        "priceUsd": "0.00007439",
+        "txns": {
+          "m5": {
+            "buys": 844,
+            "sells": 663
+          },
+          "h1": {
+            "buys": 3346,
+            "sells": 2716
+          },
+          "h6": {
+            "buys": 3346,
+            "sells": 2716
+          },
+          "h24": {
+            "buys": 3346,
+            "sells": 2716
+          }
+        },
+        "volume": {
+          "h24": 250681.56,
+          "h6": 250681.56,
+          "h1": 250681.56,
+          "m5": 60744.44
+        },
+        "priceChange": {
+          "m5": -23.87,
+          "h1": 58.03,
+          "h6": 58.03,
+          "h24": 58.03
+        },
+        "liquidity": {
+          "usd": 22921.94,
+          "base": 167898243,
+          "quote": 89.6541
+        },
+        "fdv": 74394,
+        "marketCap": 74394,
+        "pairCreatedAt": 1790316872000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/_o7lnr3731oveN7n?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/1e0tlN34JYO3gp09?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/9aeLpX3p4xxbZZVs5RPHXbYM3LYGAzc7wTDPvu9Ti3Ha?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://www.usenosh.app/coins/solana/9aeLpX3p4xxbZZVs5RPHXbYM3LYGAzc7wTDPvu9Ti3Ha",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/Grails_Sol",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "h1"
+        ],
+        "checks": {
+          "price": {
+            "value": 7.439e-05,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 0.38529910001489853,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.6147008999851016,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 22921.94,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 227078.06,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 250681.56,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 249318.44,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 74394.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 425606.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.3081154394171573,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 6062.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.231958762886598,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": 58.03,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 33.03
+          },
+          "h24": {
+            "value": 58.03,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:5DqSbDmD9YTN28kTG318WpDxVkHYJMVZyKsMhL69n6Vm",
+      "symbol": "CHILL",
+      "metrics": {
+        "price": 2.074e-05,
         "liquidity": null,
-        "fdv": 11929.51,
-        "volume24": 41659.08,
-        "buys": 442.0,
-        "sells": 338.0,
-        "h1": 169.0,
-        "h24": 169.0,
-        "age_h": 0.22133368048403,
+        "fdv": 20747.36,
+        "volume24": 40828.13,
+        "buys": 679.0,
+        "sells": 532.0,
+        "h1": 427.0,
+        "h24": 427.0,
+        "age_h": 0.13783703439765507,
         "liq_fdv": null
       },
       "pair": {
         "chainId": "solana",
         "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/crpiztnbhjblku3amwzahp2ltzv1fjcxyqcj8ysncbvy",
-        "pairAddress": "CrpizTNbHjBLKU3amwZahP2LTZV1FjcxYqCJ8ySNcBvy",
+        "url": "https://dexscreener.com/solana/2dpx3bcecewfynwf3d7pcmnmxgxumdtdboz9xh5znb53",
+        "pairAddress": "2DPX3bCECeWfyNwF3D7pcmnMXgxumDTdboZ9Xh5znb53",
         "baseToken": {
-          "address": "8vbDkUJbvRwkYDoGnmmvrmdqmJpKUbkHrP5bV3ptpump",
-          "name": "UP ONLY",
-          "symbol": "UP"
+          "address": "5DqSbDmD9YTN28kTG318WpDxVkHYJMVZyKsMhL69n6Vm",
+          "name": "Ape and Chill",
+          "symbol": "CHILL"
         },
         "quoteToken": {
-          "address": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
-          "name": "Pump",
-          "symbol": "PUMP"
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
         },
-        "priceNative": "0.003045",
-        "priceUsd": "0.00001192",
+        "priceNative": "0.0000001783",
+        "priceUsd": "0.00002074",
         "txns": {
           "m5": {
-            "buys": 151,
-            "sells": 156
+            "buys": 396,
+            "sells": 309
           },
           "h1": {
-            "buys": 442,
-            "sells": 338
+            "buys": 679,
+            "sells": 532
           },
           "h6": {
-            "buys": 442,
-            "sells": 338
+            "buys": 679,
+            "sells": 532
           },
           "h24": {
-            "buys": 442,
-            "sells": 338
+            "buys": 679,
+            "sells": 532
           }
         },
         "volume": {
-          "h24": 41659.08,
-          "h6": 41659.08,
-          "h1": 41659.08,
-          "m5": 15722.65
+          "h24": 40828.13,
+          "h6": 40828.13,
+          "h1": 40828.13,
+          "m5": 21531.22
         },
         "priceChange": {
-          "m5": -55.13,
-          "h1": 169,
-          "h6": 169,
-          "h24": 169
+          "m5": 124,
+          "h1": 427,
+          "h6": 427,
+          "h24": 427
         },
-        "fdv": 11929.51,
-        "marketCap": 11929.51,
-        "pairCreatedAt": 1790299278000,
+        "fdv": 20747.36,
+        "marketCap": 20747.36,
+        "pairCreatedAt": 1790317763000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/LPuEyrgnLbm5ZGlO?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/dMObNWwjhGbN4gRe?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/8vbDkUJbvRwkYDoGnmmvrmdqmJpKUbkHrP5bV3ptpump?timestamp=1790299800000",
-          "websites": [],
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/CnxQby1y_AnpB_Nh?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/qKTj9HNYywFTe0pi?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5DqSbDmD9YTN28kTG318WpDxVkHYJMVZyKsMhL69n6Vm?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://x.com/thenayvuiiiton/status/2100864329688003021?s=20",
+              "label": "Website"
+            }
+          ],
           "socials": [
             {
-              "url": "https://x.com/cooldevisback/status/2103293700889579727?s=20",
+              "url": "https://x.com/thebearsol/status/2103370873931804723",
               "type": "twitter"
             }
           ]
@@ -97,7 +295,7 @@
         ],
         "checks": {
           "price": {
-            "value": 1.192e-05,
+            "value": 2.074e-05,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -106,12 +304,12 @@
             "above_by": null
           },
           "age_h": {
-            "value": 0.22133368048403,
+            "value": 0.13783703439765507,
             "minimum": 2,
             "maximum": 720,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 1.77866631951597,
+            "below_by": 1.8621629656023448,
             "above_by": 0
           },
           "liquidity": {
@@ -124,21 +322,21 @@
             "above_by": null
           },
           "volume24": {
-            "value": 41659.08,
+            "value": 40828.13,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 458340.92,
+            "below_by": 459171.87,
             "above_by": null
           },
           "fdv": {
-            "value": 11929.51,
+            "value": 20747.36,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 488070.49,
+            "below_by": 479252.64,
             "above_by": 0
           },
           "liq_fdv": {
@@ -151,7 +349,7 @@
             "above_by": null
           },
           "transactions": {
-            "value": 780.0,
+            "value": 1211.0,
             "minimum": 500,
             "maximum": null,
             "passed": true,
@@ -160,7 +358,7 @@
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 1.3076923076923077,
+            "value": 1.2763157894736843,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": true,
@@ -169,22 +367,22 @@
             "above_by": 0
           },
           "h1": {
-            "value": 169.0,
+            "value": 427.0,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
             "below_by": 0,
-            "above_by": 144.0
+            "above_by": 402.0
           },
           "h24": {
-            "value": 169.0,
+            "value": 427.0,
             "minimum": -15,
             "maximum": 100,
             "passed": false,
             "missing_or_invalid": false,
             "below_by": 0,
-            "above_by": 69.0
+            "above_by": 327.0
           }
         }
       },
@@ -192,296 +390,83 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:5iqjhP5ig6JWdXQf6hYAwojZeMf11pTCvH87gCQtpump",
-      "symbol": "TTP",
+      "key": "solana:8pZdqMa6zfofVJvu1Lb7yyKvUT5aWBcLJsV2zFTUpump",
+      "symbol": "ROULETTE",
       "metrics": {
-        "price": 0.0001247,
-        "liquidity": 31866.58,
-        "fdv": 121784.0,
-        "volume24": 1012127.15,
-        "buys": 9087.0,
-        "sells": 7573.0,
-        "h1": 157.0,
-        "h24": 157.0,
-        "age_h": 0.9358164188596937,
-        "liq_fdv": 0.2616647507061683
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/359uv3h3g2zvff14anztwgekayklgdd7ze3kar68n6xr",
-        "pairAddress": "359UV3H3g2ZVff14AnZTWGeKaykLGdd7Ze3Kar68n6xR",
-        "baseToken": {
-          "address": "5iqjhP5ig6JWdXQf6hYAwojZeMf11pTCvH87gCQtpump",
-          "name": "TrendTrader Pro",
-          "symbol": "TTP"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.000001064",
-        "priceUsd": "0.0001247",
-        "txns": {
-          "m5": {
-            "buys": 137,
-            "sells": 117
-          },
-          "h1": {
-            "buys": 9087,
-            "sells": 7573
-          },
-          "h6": {
-            "buys": 9087,
-            "sells": 7573
-          },
-          "h24": {
-            "buys": 9087,
-            "sells": 7573
-          }
-        },
-        "volume": {
-          "h24": 1012127.15,
-          "h6": 1012127.15,
-          "h1": 1012127.15,
-          "m5": 9518.28
-        },
-        "priceChange": {
-          "m5": 8.27,
-          "h1": 157,
-          "h6": 157,
-          "h24": 157
-        },
-        "liquidity": {
-          "usd": 31866.58,
-          "base": 135157317,
-          "quote": 128.07627
-        },
-        "fdv": 121784,
-        "marketCap": 121784,
-        "pairCreatedAt": 1790296706000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/I1et5iN4qj69QdGN?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/AsHIjEy4cmp2W_3Q?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5iqjhP5ig6JWdXQf6hYAwojZeMf11pTCvH87gCQtpump?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://trendtrader.pro/ttp/",
-              "label": "Website"
-            },
-            {
-              "url": "https://trendtrader.pro/ttp-tokenomics/",
-              "label": "Docs"
-            },
-            {
-              "url": "https://www.youtube.com/@UseTrendTraderPro",
-              "label": "YouTube"
-            },
-            {
-              "url": "https://www.linkedin.com/company/trendtraderpro",
-              "label": "LinkedIn"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/trendtraderalgo",
-              "type": "twitter"
-            },
-            {
-              "url": "https://www.tiktok.com/@usetrendtrader.pro",
-              "type": "tiktok"
-            },
-            {
-              "url": "https://www.instagram.com/usetrendtraderpro/",
-              "type": "instagram"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "fdv",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.0001247,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.9358164188596937,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.0641835811403064,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 31866.58,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 218133.41999999998,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 1012127.15,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 121784.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 378216.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.2616647507061683,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 16660.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.1999207711607025,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 157.0,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 132.0
-          },
-          "h24": {
-            "value": 157.0,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 57.0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:3zD1X7cpubjfbnrrREVMFfdDzXJzRU7wToWnt8Xvpump",
-      "symbol": "Roulette",
-      "metrics": {
-        "price": 4.019e-06,
+        "price": 4.086e-06,
         "liquidity": null,
-        "fdv": 4019.79,
-        "volume24": 61427.92,
-        "buys": 745.0,
-        "sells": 759.0,
-        "h1": 14.54,
-        "h24": 14.54,
-        "age_h": 0.3919661601384481,
+        "fdv": 4086.25,
+        "volume24": 47034.22,
+        "buys": 634.0,
+        "sells": 527.0,
+        "h1": 14.17,
+        "h24": 14.17,
+        "age_h": 0.27620932857195535,
         "liq_fdv": null
       },
       "pair": {
         "chainId": "solana",
         "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/6jpbtvitb1tc7fwagdfwq87fa6z52znkurh9yldonrve",
-        "pairAddress": "6jpBtviTb1Tc7fwAgDFwQ87Fa6Z52ZNKUrH9YLDoNrVE",
+        "url": "https://dexscreener.com/solana/ep1vrtmrf3oloqelff4dtwalkxunddhpdx597uxux6fz",
+        "pairAddress": "EP1VRtMRF3oLoqeLFF4dtwALkxUNDdhpDx597uxUX6Fz",
         "baseToken": {
-          "address": "3zD1X7cpubjfbnrrREVMFfdDzXJzRU7wToWnt8Xvpump",
-          "name": "FomoRoulette",
-          "symbol": "Roulette"
+          "address": "8pZdqMa6zfofVJvu1Lb7yyKvUT5aWBcLJsV2zFTUpump",
+          "name": "Pump Roulette",
+          "symbol": "ROULETTE"
         },
         "quoteToken": {
           "address": "So11111111111111111111111111111111111111112",
           "name": "Wrapped SOL",
           "symbol": "SOL"
         },
-        "priceNative": "0.00000003431",
-        "priceUsd": "0.000004019",
+        "priceNative": "0.00000003512",
+        "priceUsd": "0.000004086",
         "txns": {
           "m5": {
-            "buys": 2,
-            "sells": 28
+            "buys": 14,
+            "sells": 84
           },
           "h1": {
-            "buys": 745,
-            "sells": 759
+            "buys": 634,
+            "sells": 527
           },
           "h6": {
-            "buys": 745,
-            "sells": 759
+            "buys": 634,
+            "sells": 527
           },
           "h24": {
-            "buys": 745,
-            "sells": 759
+            "buys": 634,
+            "sells": 527
           }
         },
         "volume": {
-          "h24": 61427.92,
-          "h6": 61427.92,
-          "h1": 61427.92,
-          "m5": 327.37
+          "h24": 47034.22,
+          "h6": 47034.22,
+          "h1": 47034.22,
+          "m5": 3001.98
         },
         "priceChange": {
-          "m5": -14.85,
-          "h1": 14.54,
-          "h6": 14.54,
-          "h24": 14.54
+          "m5": -65.12,
+          "h1": 14.17,
+          "h6": 14.17,
+          "h24": 14.17
         },
-        "fdv": 4019.79,
-        "marketCap": 4019.79,
-        "pairCreatedAt": 1790298664000,
+        "fdv": 4086.25,
+        "marketCap": 4086.25,
+        "pairCreatedAt": 1790317265000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/dFzFkMgzQJfEwHfx?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/EkdlNTuKJu4uzWeb?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/3zD1X7cpubjfbnrrREVMFfdDzXJzRU7wToWnt8Xvpump?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/LmABdxPCj7ZzPOxz?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/Fq3j6J_QMeGf2f9w?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/8pZdqMa6zfofVJvu1Lb7yyKvUT5aWBcLJsV2zFTUpump?timestamp=1790318100000",
           "websites": [
             {
-              "url": "https://fomoroulette.family/",
+              "url": "https://pfroulette.fun/",
               "label": "Website"
             }
           ],
           "socials": [
             {
-              "url": "https://x.com/FomoRoulette/",
+              "url": "https://x.com/PumpRoulette__",
               "type": "twitter"
             }
           ]
@@ -498,7 +483,7 @@
         ],
         "checks": {
           "price": {
-            "value": 4.019e-06,
+            "value": 4.086e-06,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -507,12 +492,12 @@
             "above_by": null
           },
           "age_h": {
-            "value": 0.3919661601384481,
+            "value": 0.27620932857195535,
             "minimum": 2,
             "maximum": 720,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 1.608033839861552,
+            "below_by": 1.7237906714280447,
             "above_by": 0
           },
           "liquidity": {
@@ -525,21 +510,21 @@
             "above_by": null
           },
           "volume24": {
-            "value": 61427.92,
+            "value": 47034.22,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 438572.08,
+            "below_by": 452965.78,
             "above_by": null
           },
           "fdv": {
-            "value": 4019.79,
+            "value": 4086.25,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 495980.21,
+            "below_by": 495913.75,
             "above_by": 0
           },
           "liq_fdv": {
@@ -552,7 +537,7 @@
             "above_by": null
           },
           "transactions": {
-            "value": 1504.0,
+            "value": 1161.0,
             "minimum": 500,
             "maximum": null,
             "passed": true,
@@ -561,7 +546,7 @@
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 0.9815546772068511,
+            "value": 1.2030360531309299,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": true,
@@ -570,7 +555,7 @@
             "above_by": 0
           },
           "h1": {
-            "value": 14.54,
+            "value": 14.17,
             "minimum": -5,
             "maximum": 25,
             "passed": true,
@@ -579,7 +564,7 @@
             "above_by": 0
           },
           "h24": {
-            "value": 14.54,
+            "value": 14.17,
             "minimum": -15,
             "maximum": 100,
             "passed": true,
@@ -593,864 +578,262 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:ALAgByDys8imQqy6ZVKWBnUkpU3dugNvUkxW7AUPgvhV",
-      "symbol": "GOCAT",
+      "key": "solana:5qfj3Yx53SPgsQPd8pUjcYB5FAxu79p1GQEnWsWzFtYD",
+      "symbol": "PVE",
       "metrics": {
-        "price": 0.0001936,
-        "liquidity": 44.87,
-        "fdv": 187512.0,
-        "volume24": 544.61,
-        "buys": 427.0,
-        "sells": 562.0,
-        "h1": -29.74,
-        "h24": 227.0,
-        "age_h": 14.380060381160842,
-        "liq_fdv": 0.00023929135202013736
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "meteora",
-        "url": "https://dexscreener.com/solana/9bxbhthbxdugzjgdpv6yiemx4csapakvkdhk7vkxfaw7",
-        "pairAddress": "9BXbhthBxdugZjGdPV6YieMX4CsAPakVkDhK7vkxFAw7",
-        "labels": [
-          "DYN2"
-        ],
-        "baseToken": {
-          "address": "ALAgByDys8imQqy6ZVKWBnUkpU3dugNvUkxW7AUPgvhV",
-          "name": "Go Cat",
-          "symbol": "GOCAT"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.000001651",
-        "priceUsd": "0.0001936",
-        "txns": {
-          "m5": {
-            "buys": 0,
-            "sells": 6
-          },
-          "h1": {
-            "buys": 11,
-            "sells": 32
-          },
-          "h6": {
-            "buys": 315,
-            "sells": 426
-          },
-          "h24": {
-            "buys": 427,
-            "sells": 562
-          }
-        },
-        "volume": {
-          "h24": 544.61,
-          "h6": 474.85,
-          "h1": 8.7,
-          "m5": 1.08
-        },
-        "priceChange": {
-          "m5": -10.65,
-          "h1": -29.74,
-          "h6": 291,
-          "h24": 227
-        },
-        "liquidity": {
-          "usd": 44.87,
-          "base": 116266,
-          "quote": 0.1906
-        },
-        "fdv": 187512,
-        "marketCap": 187512,
-        "pairCreatedAt": 1790248307000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/5IFwU4gHtY1n7zPt?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/yxBdPtf95dtKpFUG?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/ALAgByDys8imQqy6ZVKWBnUkpU3dugNvUkxW7AUPgvhV?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://www.lesgo.fun/token/ALAgByDys8imQqy6ZVKWBnUkpU3dugNvUkxW7AUPgvhV",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/GoCatLesGo",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "liquidity",
-          "volume24",
-          "fdv",
-          "liq_fdv",
-          "buy_sell_ratio",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.0001936,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 14.380060381160842,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 44.87,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 249955.13,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 544.61,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 499455.39,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 187512.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 312488.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.00023929135202013736,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.049760708647979865,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 989.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 0.7597864768683275,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.04021352313167259,
-            "above_by": 0
-          },
-          "h1": {
-            "value": -29.74,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 24.74,
-            "above_by": 0
-          },
-          "h24": {
-            "value": 227.0,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 127.0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:CcpyVbqiosnXjojmGkrce9kJ4A71mK3KrU5dfftE9mZ8",
-      "symbol": "Ugly",
-      "metrics": {
-        "price": 6.668e-06,
+        "price": 3.309e-06,
         "liquidity": null,
-        "fdv": 6668.55,
-        "volume24": 31916.36,
-        "buys": 286.0,
-        "sells": 275.0,
-        "h1": 57.97,
-        "h24": 57.97,
-        "age_h": 0.4989956607421239,
+        "fdv": 3309.74,
+        "volume24": 29359.22,
+        "buys": 184.0,
+        "sells": 171.0,
+        "h1": -0.01,
+        "h24": -0.01,
+        "age_h": 0.23513609608014424,
         "liq_fdv": null
       },
       "pair": {
         "chainId": "solana",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/fyojdwxn4g4xb76w4kg8dgkbpjbxklkrkshylrd4qlru",
-        "pairAddress": "FYojDwXn4G4Xb76w4KG8DGkBPjbxkLKRKSHyLrD4QLru",
+        "dexId": "meteoradbc",
+        "url": "https://dexscreener.com/solana/gz3mdqbxavg5vfuowml9qekkc8akknmiflyd4cjmxi6x",
+        "pairAddress": "GZ3mdqBXAvG5vfuowmL9qEkKc8aKKnmifLyD4CjmXi6x",
         "baseToken": {
-          "address": "CcpyVbqiosnXjojmGkrce9kJ4A71mK3KrU5dfftE9mZ8",
-          "name": "🥷 be ugly ash",
-          "symbol": "Ugly"
+          "address": "5qfj3Yx53SPgsQPd8pUjcYB5FAxu79p1GQEnWsWzFtYD",
+          "name": "Player vs. Environment",
+          "symbol": "PVE"
         },
         "quoteToken": {
           "address": "So11111111111111111111111111111111111111112",
           "name": "Wrapped SOL",
           "symbol": "SOL"
         },
-        "priceNative": "0.00000005676",
-        "priceUsd": "0.000006668",
-        "txns": {
-          "m5": {
-            "buys": 2,
-            "sells": 1
-          },
-          "h1": {
-            "buys": 286,
-            "sells": 275
-          },
-          "h6": {
-            "buys": 286,
-            "sells": 275
-          },
-          "h24": {
-            "buys": 286,
-            "sells": 275
-          }
-        },
-        "volume": {
-          "h24": 31916.36,
-          "h6": 31916.36,
-          "h1": 31916.36,
-          "m5": 36.02
-        },
-        "priceChange": {
-          "m5": 0.23,
-          "h1": 57.97,
-          "h6": 57.97,
-          "h24": 57.97
-        },
-        "fdv": 6668.55,
-        "marketCap": 6668.55,
-        "pairCreatedAt": 1790298279000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/43KqIwbofo92f5De?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/wtuSWJ1cEEWD8syy?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/CcpyVbqiosnXjojmGkrce9kJ4A71mK3KrU5dfftE9mZ8?timestamp=1790299800000",
-          "websites": [],
-          "socials": [
-            {
-              "url": "https://x.com/iclimbcharts/status/2103289509739888805?s=20",
-              "type": "twitter"
-            },
-            {
-              "url": "https://www.tiktok.com/search?q=ugly%20ash&t",
-              "type": "tiktok"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "volume24",
-          "fdv",
-          "liq_fdv",
-          "h1"
-        ],
-        "checks": {
-          "price": {
-            "value": 6.668e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.4989956607421239,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.501004339257876,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": null,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 31916.36,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 468083.64,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 6668.55,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 493331.45,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": null,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 561.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.04,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 57.97,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 32.97
-          },
-          "h24": {
-            "value": 57.97,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:5aL8e14oZ1RWzZR9R6gmjpxQuRCX29bW9wPGhy4Hpump",
-      "symbol": "SOLRAIN",
-      "metrics": {
-        "price": 2.996e-06,
-        "liquidity": 3547.84,
-        "fdv": 2996.0,
-        "volume24": 2716993.8,
-        "buys": 9724.0,
-        "sells": 8395.0,
-        "h1": -93.96,
-        "h24": -93.96,
-        "age_h": 0.7126456185181935,
-        "liq_fdv": 1.184192256341789
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/f138m2ursuau4pqbfarqzurgxua6jg7dn1vyxoxqmt4g",
-        "pairAddress": "F138m2URSUAu4pqBfARqzurGxuA6JG7Dn1vyXoxQMT4G",
-        "baseToken": {
-          "address": "5aL8e14oZ1RWzZR9R6gmjpxQuRCX29bW9wPGhy4Hpump",
-          "name": "SolRain",
-          "symbol": "SOLRAIN"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00000002557",
-        "priceUsd": "0.000002996",
-        "txns": {
-          "m5": {
-            "buys": 4,
-            "sells": 12
-          },
-          "h1": {
-            "buys": 9724,
-            "sells": 8395
-          },
-          "h6": {
-            "buys": 9724,
-            "sells": 8395
-          },
-          "h24": {
-            "buys": 9724,
-            "sells": 8395
-          }
-        },
-        "volume": {
-          "h24": 2716993.8,
-          "h6": 2716993.8,
-          "h1": 2716993.8,
-          "m5": 109.77
-        },
-        "priceChange": {
-          "m5": 5.44,
-          "h1": -93.96,
-          "h6": -93.96,
-          "h24": -93.96
-        },
-        "liquidity": {
-          "usd": 3547.84,
-          "base": 930025315,
-          "quote": 6.4988
-        },
-        "fdv": 2996,
-        "marketCap": 2996,
-        "pairCreatedAt": 1790297510000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/6rs-KwF_gLBadZbQ?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/KIPgjAzKlDYZ2CSv?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5aL8e14oZ1RWzZR9R6gmjpxQuRCX29bW9wPGhy4Hpump?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://solrain.site/",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/solraindev",
-              "type": "twitter"
-            },
-            {
-              "url": "https://t.me/SolRainDev",
-              "type": "telegram"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "fdv",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 2.996e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.7126456185181935,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.2873543814818065,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 3547.84,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 246452.16,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 2716993.8,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 2996.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 497004.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 1.184192256341789,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 18119.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.1583085169743894,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": -93.96,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 88.96,
-            "above_by": 0
-          },
-          "h24": {
-            "value": -93.96,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 78.96,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "bsc:0x8151Dc49f9bEE6A816B3B6dAc766Ca91606a4675",
-      "symbol": "COD",
-      "metrics": {
-        "price": 0.001337,
-        "liquidity": 111913.99,
-        "fdv": 1337402.0,
-        "volume24": 1459237.27,
-        "buys": 2161.0,
-        "sells": 530.0,
-        "h1": 92.15,
-        "h24": 53960.0,
-        "age_h": 1.546017875207795,
-        "liq_fdv": 0.08368014254502386
-      },
-      "pair": {
-        "chainId": "bsc",
-        "dexId": "pancakeswap",
-        "url": "https://dexscreener.com/bsc/0x1d6bf7e2c4b233124498fa1f9720ad4ef6f81a21",
-        "pairAddress": "0x1d6bF7E2c4b233124498fA1f9720Ad4eF6f81A21",
-        "labels": [
-          "v3"
-        ],
-        "baseToken": {
-          "address": "0x8151Dc49f9bEE6A816B3B6dAc766Ca91606a4675",
-          "name": "CloudBank",
-          "symbol": "COD"
-        },
-        "quoteToken": {
-          "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-          "name": "Wrapped BNB",
-          "symbol": "WBNB"
-        },
-        "priceNative": "0.000001722",
-        "priceUsd": "0.001337",
-        "txns": {
-          "m5": {
-            "buys": 115,
-            "sells": 27
-          },
-          "h1": {
-            "buys": 1411,
-            "sells": 291
-          },
-          "h6": {
-            "buys": 2161,
-            "sells": 530
-          },
-          "h24": {
-            "buys": 2161,
-            "sells": 530
-          }
-        },
-        "volume": {
-          "h24": 1459237.27,
-          "h6": 1459237.27,
-          "h1": 1112832.76,
-          "m5": 80851.27
-        },
-        "priceChange": {
-          "m5": -9.29,
-          "h1": 92.15,
-          "h6": 53960,
-          "h24": 53960
-        },
-        "liquidity": {
-          "usd": 111913.99,
-          "base": 41890764,
-          "quote": 71.9785
-        },
-        "fdv": 1337402,
-        "marketCap": 1337402,
-        "pairCreatedAt": 1790294510000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/alPjhkhHBsxlqYw5?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/zQVMAj0AyZVWVGOD?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0x8151dc49f9bee6a816b3b6dac766ca91606a4675?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://cloudbank.space",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/CloudBankX",
-              "type": "twitter"
-            },
-            {
-              "url": "https://t.me/cloudbank_channel",
-              "type": "telegram"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "buy_sell_ratio",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.001337,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 1.546017875207795,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.4539821247922049,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 111913.99,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 138086.01,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 1459237.27,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 1337402.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.08368014254502386,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 2691.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 4.077358490566038,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 1.5773584905660378
-          },
-          "h1": {
-            "value": 92.15,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 67.15
-          },
-          "h24": {
-            "value": 53960.0,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 53860.0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:5nmuZ7ECpnszDDn7KRAJQm8ZUVMd2qqEnA4K5rL6KHU9",
-      "symbol": "BONGO",
-      "metrics": {
-        "price": 0.0001264,
-        "liquidity": 248.39,
-        "fdv": 122294.0,
-        "volume24": 2788.62,
-        "buys": 133.0,
-        "sells": 173.0,
-        "h1": -54.4,
-        "h24": -47.47,
-        "age_h": 1.768003282017178,
-        "liq_fdv": 0.0020310890149966474
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "meteora",
-        "url": "https://dexscreener.com/solana/vufnlgfj8hcgl6lybmtvudcnv5cuxpmn2gffvcdbyg8",
-        "pairAddress": "vUfnLGFJ8hcGL6LyBmtVuDCnv5cUxPmn2GfFvCdByG8",
-        "labels": [
-          "DLMM"
-        ],
-        "baseToken": {
-          "address": "5nmuZ7ECpnszDDn7KRAJQm8ZUVMd2qqEnA4K5rL6KHU9",
-          "name": "BONGO",
-          "symbol": "BONGO"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.000001074",
-        "priceUsd": "0.0001264",
+        "priceNative": "0.00000002842",
+        "priceUsd": "0.000003309",
         "txns": {
           "m5": {
             "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 17,
-            "sells": 37
+            "buys": 184,
+            "sells": 171
           },
           "h6": {
-            "buys": 133,
-            "sells": 173
+            "buys": 184,
+            "sells": 171
           },
           "h24": {
-            "buys": 133,
-            "sells": 173
+            "buys": 184,
+            "sells": 171
           }
         },
         "volume": {
-          "h24": 2788.62,
-          "h6": 2788.62,
-          "h1": 84.28,
+          "h24": 29359.22,
+          "h6": 29359.22,
+          "h1": 29359.22,
           "m5": 0
         },
         "priceChange": {
-          "h1": -54.4,
-          "h6": -47.47,
-          "h24": -47.47
+          "h1": -0.01,
+          "h6": -0.01,
+          "h24": -0.01
         },
-        "liquidity": {
-          "usd": 248.39,
-          "base": 1897693,
-          "quote": 0.07246
-        },
-        "fdv": 122294,
-        "marketCap": 122294,
-        "pairCreatedAt": 1790293711000,
+        "fdv": 3309.74,
+        "marketCap": 3309.74,
+        "pairCreatedAt": 1790317413000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/mW--Taplr3Au25vi?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/ac8p3E5k73PNwKLk?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5nmuZ7ECpnszDDn7KRAJQm8ZUVMd2qqEnA4K5rL6KHU9?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/Wgi1xmBUB0zo697w?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/FxgzuIq3WFkivI9v?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5qfj3Yx53SPgsQPd8pUjcYB5FAxu79p1GQEnWsWzFtYD?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://pve.vc/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/pvedotvc",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "liq_fdv",
+          "transactions"
+        ],
+        "checks": {
+          "price": {
+            "value": 3.309e-06,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 0.23513609608014424,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.7648639039198557,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": null,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 29359.22,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 470640.78,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 3309.74,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 496690.26,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": null,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 355.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 145.0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.0760233918128654,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -0.01,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -0.01,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:6WyTcku8rQ2j2SJhadD85NbsGVcwn3pDgRo7qjyLpump",
+      "symbol": "Charted",
+      "metrics": {
+        "price": 5.074e-06,
+        "liquidity": null,
+        "fdv": 5074.21,
+        "volume24": 137013.0,
+        "buys": 2093.0,
+        "sells": 1611.0,
+        "h1": 46.19,
+        "h24": 46.19,
+        "age_h": 0.29906360725561776,
+        "liq_fdv": null
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/dqacfavpsgqtaniacjrdszxnkngtqunwyabszq1skjvq",
+        "pairAddress": "DQaCFAVPsGqTaniAcjrDSZxnkngtQuNWyabSZq1skJVq",
+        "baseToken": {
+          "address": "6WyTcku8rQ2j2SJhadD85NbsGVcwn3pDgRo7qjyLpump",
+          "name": "Charted",
+          "symbol": "Charted"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.00000004361",
+        "priceUsd": "0.000005074",
+        "txns": {
+          "m5": {
+            "buys": 53,
+            "sells": 81
+          },
+          "h1": {
+            "buys": 2093,
+            "sells": 1611
+          },
+          "h6": {
+            "buys": 2093,
+            "sells": 1611
+          },
+          "h24": {
+            "buys": 2093,
+            "sells": 1611
+          }
+        },
+        "volume": {
+          "h24": 137013,
+          "h6": 137013,
+          "h1": 137013,
+          "m5": 3225.61
+        },
+        "priceChange": {
+          "m5": -22.27,
+          "h1": 46.19,
+          "h6": 46.19,
+          "h24": 46.19
+        },
+        "fdv": 5074.21,
+        "marketCap": 5074.21,
+        "pairCreatedAt": 1790317183000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/aWXQ2VcOtJlCbpwe?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/FbzTNOZsNU5vxsoU?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/6WyTcku8rQ2j2SJhadD85NbsGVcwn3pDgRo7qjyLpump?timestamp=1790318100000",
           "websites": [],
           "socials": []
         }
@@ -1463,596 +846,11 @@
           "volume24",
           "fdv",
           "liq_fdv",
-          "transactions",
-          "buy_sell_ratio",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.0001264,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 1.768003282017178,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.23199671798282195,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 248.39,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 249751.61,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 2788.62,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 497211.38,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 122294.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 377706.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.0020310890149966474,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.04796891098500335,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 306.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 194.0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 0.7687861271676301,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.031213872832369982,
-            "above_by": 0
-          },
-          "h1": {
-            "value": -54.4,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 49.4,
-            "above_by": 0
-          },
-          "h24": {
-            "value": -47.47,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 32.47,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:D5qLnkRpzvuizsp4BfcrEWgUHiwrLoxVNZHoCx3Rpump",
-      "symbol": "OG",
-      "metrics": {
-        "price": 0.0003009,
-        "liquidity": 49170.08,
-        "fdv": 296087.0,
-        "volume24": 537614.4,
-        "buys": 8488.0,
-        "sells": 1380.0,
-        "h1": 214.0,
-        "h24": 214.0,
-        "age_h": 0.7769298177957534,
-        "liq_fdv": 0.1660663251003928
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/6wgu5mnnj1tjzr9arv6lyulrybzpnfpgd93t7eiozhrq",
-        "pairAddress": "6wGu5MNnJ1Tjzr9arV6LYULrybZpNfpgD93t7EioZHrQ",
-        "baseToken": {
-          "address": "D5qLnkRpzvuizsp4BfcrEWgUHiwrLoxVNZHoCx3Rpump",
-          "name": "GO Mascot",
-          "symbol": "OG"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.000002569",
-        "priceUsd": "0.0003009",
-        "txns": {
-          "m5": {
-            "buys": 729,
-            "sells": 134
-          },
-          "h1": {
-            "buys": 8488,
-            "sells": 1380
-          },
-          "h6": {
-            "buys": 8488,
-            "sells": 1380
-          },
-          "h24": {
-            "buys": 8488,
-            "sells": 1380
-          }
-        },
-        "volume": {
-          "h24": 537614.4,
-          "h6": 537614.4,
-          "h1": 537614.4,
-          "m5": 21820.51
-        },
-        "priceChange": {
-          "m5": -13.57,
-          "h1": 214,
-          "h6": 214,
-          "h24": 214
-        },
-        "liquidity": {
-          "usd": 49170.08,
-          "base": 85188784,
-          "quote": 200.8326
-        },
-        "fdv": 296087,
-        "marketCap": 296087,
-        "pairCreatedAt": 1790297279000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/X4EjnNIoGKfrQL3Y?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/MwbWN94PxxxBvGGz?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/D5qLnkRpzvuizsp4BfcrEWgUHiwrLoxVNZHoCx3Rpump?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://gomascotog.lol/",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/GoMascotOG",
-              "type": "twitter"
-            }
-          ]
-        },
-        "boosts": {
-          "active": 80
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "fdv",
-          "buy_sell_ratio",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.0003009,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.7769298177957534,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.2230701822042467,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 49170.08,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 200829.91999999998,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 537614.4,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 296087.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 203913.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.1660663251003928,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 9868.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 6.15072463768116,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 3.6507246376811597
-          },
-          "h1": {
-            "value": 214.0,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 189.0
-          },
-          "h24": {
-            "value": 214.0,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 114.0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:nDZknLvfFRp5rgUHdzTrQsmSY5NKzoavqdLjSHVpump",
-      "symbol": "COLLECT",
-      "metrics": {
-        "price": 0.001307,
-        "liquidity": 144535.14,
-        "fdv": 1293850.0,
-        "volume24": 490653.75,
-        "buys": 1988.0,
-        "sells": 2850.0,
-        "h1": 235.0,
-        "h24": 235.0,
-        "age_h": 0.4825248979859882,
-        "liq_fdv": 0.11170934806971443
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "meteora",
-        "url": "https://dexscreener.com/solana/9gd7vaaocpe8sqfrig4imhll6mwxmevtvnjpsbchrbqc",
-        "pairAddress": "9GD7vaaocPe8sQFriG4iMhLL6mWxmevTVnjpSbCHRBqc",
-        "labels": [
-          "DLMM"
-        ],
-        "baseToken": {
-          "address": "nDZknLvfFRp5rgUHdzTrQsmSY5NKzoavqdLjSHVpump",
-          "name": "GoCollect",
-          "symbol": "COLLECT"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00001116",
-        "priceUsd": "0.001307",
-        "txns": {
-          "m5": {
-            "buys": 202,
-            "sells": 298
-          },
-          "h1": {
-            "buys": 1988,
-            "sells": 2850
-          },
-          "h6": {
-            "buys": 1988,
-            "sells": 2850
-          },
-          "h24": {
-            "buys": 1988,
-            "sells": 2850
-          }
-        },
-        "volume": {
-          "h24": 490653.75,
-          "h6": 490653.75,
-          "h1": 490653.75,
-          "m5": 54920.62
-        },
-        "priceChange": {
-          "m5": -7.9,
-          "h1": 235,
-          "h6": 235,
-          "h24": 235
-        },
-        "liquidity": {
-          "usd": 144535.14,
-          "base": 31184559,
-          "quote": 885.6019
-        },
-        "fdv": 1293850,
-        "marketCap": 1293850,
-        "pairCreatedAt": 1790298339000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/iK3Y4Z0mqqb-iamC?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/GLOrryIQJDyGtnRn?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/nDZknLvfFRp5rgUHdzTrQsmSY5NKzoavqdLjSHVpump?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://gocollect.fun/",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/gocollectfun",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "volume24",
-          "buy_sell_ratio",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.001307,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.4825248979859882,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.5174751020140118,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 144535.14,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 105464.85999999999,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 490653.75,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 9346.25,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 1293850.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.11170934806971443,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 4838.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 0.6975438596491228,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.10245614035087725,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 235.0,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 210.0
-          },
-          "h24": {
-            "value": 235.0,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 135.0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:AJptdzQJESribvtb8mNuc4ArfUz66TUxQgoenKZrpump",
-      "symbol": "cummin",
-      "metrics": {
-        "price": 8.812e-05,
-        "liquidity": 27701.05,
-        "fdv": 88128.0,
-        "volume24": 191694.43,
-        "buys": 2678.0,
-        "sells": 1987.0,
-        "h1": 52.21,
-        "h24": 52.21,
-        "age_h": 0.27034428980615405,
-        "liq_fdv": 0.31432745551924474
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/gwpkguhcmmwun2kmwud1dc4xbejvgbagkw47zhpotd5i",
-        "pairAddress": "GWPKguhcMmwuN2kmWUD1DC4XbEjvGBAGkw47zHpotd5i",
-        "baseToken": {
-          "address": "AJptdzQJESribvtb8mNuc4ArfUz66TUxQgoenKZrpump",
-          "name": "cummin",
-          "symbol": "cummin"
-        },
-        "quoteToken": {
-          "address": "HiMSSzzwkZkrXJ4PGVJRdtfLaANeAztjjcgk5Dxe7Lwx",
-          "name": "Hims & Hers Health - Backpack Securities",
-          "symbol": "HIMS"
-        },
-        "priceNative": "0.000002998",
-        "priceUsd": "0.00008812",
-        "txns": {
-          "m5": {
-            "buys": 396,
-            "sells": 283
-          },
-          "h1": {
-            "buys": 2678,
-            "sells": 1987
-          },
-          "h6": {
-            "buys": 2678,
-            "sells": 1987
-          },
-          "h24": {
-            "buys": 2678,
-            "sells": 1987
-          }
-        },
-        "volume": {
-          "h24": 191694.43,
-          "h6": 191694.43,
-          "h1": 191694.43,
-          "m5": 30597.72
-        },
-        "priceChange": {
-          "m5": 47.71,
-          "h1": 52.21,
-          "h6": 52.21,
-          "h24": 52.21
-        },
-        "liquidity": {
-          "usd": 27701.05,
-          "base": 170601212,
-          "quote": 431.02211
-        },
-        "fdv": 88128,
-        "marketCap": 88128,
-        "pairCreatedAt": 1790299103000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/30WMsCaV9VXbd2P0?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/2qSQDQWzaYFysFYv?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/AJptdzQJESribvtb8mNuc4ArfUz66TUxQgoenKZrpump?timestamp=1790299800000",
-          "websites": [],
-          "socials": [
-            {
-              "url": "https://x.com/i/communities/2031057123820581083",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "volume24",
-          "fdv",
           "h1"
         ],
         "checks": {
           "price": {
-            "value": 8.812e-05,
+            "value": 5.074e-06,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -2061,198 +859,12 @@
             "above_by": null
           },
           "age_h": {
-            "value": 0.27034428980615405,
+            "value": 0.29906360725561776,
             "minimum": 2,
             "maximum": 720,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 1.729655710193846,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 27701.05,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 222298.95,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 191694.43,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 308305.57,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 88128.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 411872.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.31432745551924474,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 4665.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.3477604428787116,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 52.21,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 27.21
-          },
-          "h24": {
-            "value": 52.21,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:8NYhAacy4Gs9Dz4nSA62MDmTdmvoiYJ2hgPmoyjiWxpx",
-      "symbol": "Emma",
-      "metrics": {
-        "price": 3.701e-06,
-        "liquidity": null,
-        "fdv": 3701.82,
-        "volume24": 29790.41,
-        "buys": 233.0,
-        "sells": 244.0,
-        "h1": -55.94,
-        "h24": -55.94,
-        "age_h": 0.752882259355651,
-        "liq_fdv": null
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/e8zgjxq83ses55voemnk45qplhbh8w3jbjouqw73yahy",
-        "pairAddress": "E8ZgJXq83SeS55voEMnk45qPLHBH8W3JBjoUqw73Yahy",
-        "baseToken": {
-          "address": "8NYhAacy4Gs9Dz4nSA62MDmTdmvoiYJ2hgPmoyjiWxpx",
-          "name": "Reverse Emma Stone",
-          "symbol": "Emma"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00000003151",
-        "priceUsd": "0.000003701",
-        "txns": {
-          "m5": {
-            "buys": 0,
-            "sells": 1
-          },
-          "h1": {
-            "buys": 233,
-            "sells": 244
-          },
-          "h6": {
-            "buys": 233,
-            "sells": 244
-          },
-          "h24": {
-            "buys": 233,
-            "sells": 244
-          }
-        },
-        "volume": {
-          "h24": 29790.41,
-          "h6": 29790.41,
-          "h1": 29790.41,
-          "m5": 20.8
-        },
-        "priceChange": {
-          "m5": -1.36,
-          "h1": -55.94,
-          "h6": -55.94,
-          "h24": -55.94
-        },
-        "fdv": 3701.82,
-        "marketCap": 3701.82,
-        "pairCreatedAt": 1790297366000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/1s3AvOFEN_1kycbV?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/GUsx5nHMudxTIcxY?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/8NYhAacy4Gs9Dz4nSA62MDmTdmvoiYJ2hgPmoyjiWxpx?timestamp=1790299800000",
-          "websites": [],
-          "socials": [
-            {
-              "url": "https://x.com/esotericpigeon/status/2103285637868847421?s=20",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "volume24",
-          "fdv",
-          "liq_fdv",
-          "transactions",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 3.701e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.752882259355651,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.247117740644349,
+            "below_by": 1.7009363927443824,
             "above_by": 0
           },
           "liquidity": {
@@ -2265,21 +877,21 @@
             "above_by": null
           },
           "volume24": {
-            "value": 29790.41,
+            "value": 137013.0,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 470209.59,
+            "below_by": 362987.0,
             "above_by": null
           },
           "fdv": {
-            "value": 3701.82,
+            "value": 5074.21,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 496298.18,
+            "below_by": 494925.79,
             "above_by": 0
           },
           "liq_fdv": {
@@ -2292,16 +904,16 @@
             "above_by": null
           },
           "transactions": {
-            "value": 477.0,
+            "value": 3704.0,
             "minimum": 500,
             "maximum": null,
-            "passed": false,
+            "passed": true,
             "missing_or_invalid": false,
-            "below_by": 23.0,
+            "below_by": 0,
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 0.9549180327868853,
+            "value": 1.2991930477963998,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": true,
@@ -2310,21 +922,21 @@
             "above_by": 0
           },
           "h1": {
-            "value": -55.94,
+            "value": 46.19,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 50.94,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 21.189999999999998
           },
           "h24": {
-            "value": -55.94,
+            "value": 46.19,
             "minimum": -15,
             "maximum": 100,
-            "passed": false,
+            "passed": true,
             "missing_or_invalid": false,
-            "below_by": 40.94,
+            "below_by": 0,
             "above_by": 0
           }
         }
@@ -2333,280 +945,89 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:8Lj2cdk5VgqFEpcaXHoaxYSbQrpgceaK7p4B25WqBkyT",
-      "symbol": "LESGOH",
+      "key": "bsc:0x4392cBaE887bb2CcF3d58bc4D04F782c76B47777",
+      "symbol": "币安月饼",
       "metrics": {
-        "price": 0.0002102,
-        "liquidity": 10342.83,
-        "fdv": 201132.0,
-        "volume24": 36359.89,
-        "buys": 378.0,
-        "sells": 415.0,
-        "h1": 95324.0,
-        "h24": 58.62,
-        "age_h": 3.0937560212612154,
-        "liq_fdv": 0.05142309528071117
+        "price": 9.724e-05,
+        "liquidity": 64972.19,
+        "fdv": 97207.0,
+        "volume24": 35543.78,
+        "buys": 418.0,
+        "sells": 33.0,
+        "h1": 41.28,
+        "h24": 41.28,
+        "age_h": 0.6155291316906611,
+        "liq_fdv": 0.6683900336395527
       },
       "pair": {
-        "chainId": "solana",
-        "dexId": "meteora",
-        "url": "https://dexscreener.com/solana/ovsuhtro4qd3y7jua1nyj18cc2syzt4vtu7esfduovv",
-        "pairAddress": "oVSuhTro4Qd3y7juA1nyj18Cc2sYZt4VTU7EsFDuoVv",
+        "chainId": "bsc",
+        "dexId": "pancakeswap",
+        "url": "https://dexscreener.com/bsc/0x5a0f99945abccbfe1b0ff083d7e96bd50aa82bcd",
+        "pairAddress": "0x5a0f99945aBCCBFe1b0FF083d7E96BD50AA82bCd",
         "labels": [
-          "DLMM"
+          "v3"
         ],
         "baseToken": {
-          "address": "8Lj2cdk5VgqFEpcaXHoaxYSbQrpgceaK7p4B25WqBkyT",
-          "name": "Les Goh",
-          "symbol": "LESGOH"
+          "address": "0x4392cBaE887bb2CcF3d58bc4D04F782c76B47777",
+          "name": "币安月饼",
+          "symbol": "币安月饼"
         },
         "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
+          "address": "0x431a3BEE82E2ca41e49895CbECE5bB0F76A89b7A",
+          "name": "Apple",
+          "symbol": "AAPLB"
         },
-        "priceNative": "0.000001789",
-        "priceUsd": "0.0002102",
+        "priceNative": "0.0000002893",
+        "priceUsd": "0.00009724",
         "txns": {
           "m5": {
-            "buys": 0,
-            "sells": 0
+            "buys": 19,
+            "sells": 3
           },
           "h1": {
-            "buys": 61,
-            "sells": 116
+            "buys": 418,
+            "sells": 33
           },
           "h6": {
-            "buys": 378,
-            "sells": 415
+            "buys": 418,
+            "sells": 33
           },
           "h24": {
-            "buys": 378,
-            "sells": 415
+            "buys": 418,
+            "sells": 33
           }
         },
         "volume": {
-          "h24": 36359.89,
-          "h6": 36359.89,
-          "h1": 6893.15,
-          "m5": 0
+          "h24": 35543.78,
+          "h6": 35543.78,
+          "h1": 35543.78,
+          "m5": 1155.36
         },
         "priceChange": {
-          "h1": 95324,
-          "h6": 58.62,
-          "h24": 58.62
+          "m5": 1,
+          "h1": 41.28,
+          "h6": 41.28,
+          "h24": 41.28
         },
         "liquidity": {
-          "usd": 10342.83,
-          "base": 7017992,
-          "quote": 75.48
+          "usd": 64972.19,
+          "base": 299922516,
+          "quote": 106.5278
         },
-        "fdv": 201132,
-        "marketCap": 201132,
-        "pairCreatedAt": 1790288939000,
+        "fdv": 97207,
+        "marketCap": 97162,
+        "pairCreatedAt": 1790316044000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/PtrouBCCqiA-7mfj?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/35gd2YDHeDkkaIL7?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/8Lj2cdk5VgqFEpcaXHoaxYSbQrpgceaK7p4B25WqBkyT?timestamp=1790299800000",
-          "websites": [],
-          "socials": [
-            {
-              "url": "https://x.com/Lezzgoman",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "liquidity",
-          "volume24",
-          "fdv",
-          "h1"
-        ],
-        "checks": {
-          "price": {
-            "value": 0.0002102,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 3.0937560212612154,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 10342.83,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 239657.17,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 36359.89,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 463640.11,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 201132.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 298868.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 0.05142309528071117,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 793.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 0.9108433734939759,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 95324.0,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 95299.0
-          },
-          "h24": {
-            "value": 58.62,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:38MZ6UH26KNgxo3dw5RnJ1hETh3ZtoAvNfoKZhd3pump",
-      "symbol": "Cradle",
-      "metrics": {
-        "price": 2.655e-06,
-        "liquidity": 2621.03,
-        "fdv": 2656.0,
-        "volume24": 39951.33,
-        "buys": 343.0,
-        "sells": 508.0,
-        "h1": -94.37,
-        "h24": -94.37,
-        "age_h": 0.5796284735865063,
-        "liq_fdv": 0.9868335843373495
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/hiwrljva8cvfrhcwtdwm4owmt4vjuu1so2d6ysdf5sbs",
-        "pairAddress": "HiwrLjva8cvfrHcwTDWM4oWMT4VJuu1so2d6ysdf5sBS",
-        "baseToken": {
-          "address": "38MZ6UH26KNgxo3dw5RnJ1hETh3ZtoAvNfoKZhd3pump",
-          "name": "Cradle",
-          "symbol": "Cradle"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00000002266",
-        "priceUsd": "0.000002655",
-        "txns": {
-          "m5": {
-            "buys": 12,
-            "sells": 10
-          },
-          "h1": {
-            "buys": 343,
-            "sells": 508
-          },
-          "h6": {
-            "buys": 343,
-            "sells": 508
-          },
-          "h24": {
-            "buys": 343,
-            "sells": 508
-          }
-        },
-        "volume": {
-          "h24": 39951.33,
-          "h6": 39951.33,
-          "h1": 39951.33,
-          "m5": 1308.89
-        },
-        "priceChange": {
-          "m5": 5.44,
-          "h1": -94.37,
-          "h6": -94.37,
-          "h24": -94.37
-        },
-        "liquidity": {
-          "usd": 2621.03,
-          "base": 873038677,
-          "quote": 2.5828
-        },
-        "fdv": 2656,
-        "marketCap": 2656,
-        "pairCreatedAt": 1790297990000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/llniqZ7dORFa66cn?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/ZO3abJQC_VOE0Jl_?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/38MZ6UH26KNgxo3dw5RnJ1hETh3ZtoAvNfoKZhd3pump?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/FypxUBf1RheCcbUi?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/ZaL6HezAhTTlu4PL?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0x4392cbae887bb2ccf3d58bc4d04f782c76b47777?timestamp=1790318100000",
           "websites": [
             {
-              "url": "https://www.cradle.fun/",
+              "url": "https://m.debox.pro/group?id=fvg5w2mb&code=rf7ljgn4",
               "label": "Website"
             }
           ],
-          "socials": [
-            {
-              "url": "https://x.com/usecradle",
-              "type": "twitter"
-            }
-          ]
+          "socials": []
         }
       },
       "gate": {
@@ -2616,13 +1037,13 @@
           "liquidity",
           "volume24",
           "fdv",
+          "transactions",
           "buy_sell_ratio",
-          "h1",
-          "h24"
+          "h1"
         ],
         "checks": {
           "price": {
-            "value": 2.655e-06,
+            "value": 9.724e-05,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -2631,43 +1052,43 @@
             "above_by": null
           },
           "age_h": {
-            "value": 0.5796284735865063,
+            "value": 0.6155291316906611,
             "minimum": 2,
             "maximum": 720,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 1.4203715264134937,
+            "below_by": 1.384470868309339,
             "above_by": 0
           },
           "liquidity": {
-            "value": 2621.03,
+            "value": 64972.19,
             "minimum": 250000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 247378.97,
+            "below_by": 185027.81,
             "above_by": null
           },
           "volume24": {
-            "value": 39951.33,
+            "value": 35543.78,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 460048.67,
+            "below_by": 464456.22,
             "above_by": null
           },
           "fdv": {
-            "value": 2656.0,
+            "value": 97207.0,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 497344.0,
+            "below_by": 402793.0,
             "above_by": 0
           },
           "liq_fdv": {
-            "value": 0.9868335843373495,
+            "value": 0.6683900336395527,
             "minimum": 0.05,
             "maximum": null,
             "passed": true,
@@ -2676,39 +1097,39 @@
             "above_by": null
           },
           "transactions": {
-            "value": 851.0,
+            "value": 451.0,
             "minimum": 500,
             "maximum": null,
-            "passed": true,
+            "passed": false,
             "missing_or_invalid": false,
-            "below_by": 0,
+            "below_by": 49.0,
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 0.6751968503937008,
+            "value": 12.666666666666666,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 0.12480314960629924,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 10.166666666666666
           },
           "h1": {
-            "value": -94.37,
+            "value": 41.28,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 89.37,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 16.28
           },
           "h24": {
-            "value": -94.37,
+            "value": 41.28,
             "minimum": -15,
             "maximum": 100,
-            "passed": false,
+            "passed": true,
             "missing_or_invalid": false,
-            "below_by": 79.37,
+            "below_by": 0,
             "above_by": 0
           }
         }
@@ -2717,92 +1138,485 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:5qfodizArUwfzWxnHqvaK45eVdzv1mj8L6QPY8gUpump",
-      "symbol": "TUGGIN",
+      "key": "solana:3aom1gqjVhPEgxH2voXXTFCG2hzgM3XLk4iEy5vRpump",
+      "symbol": "F2G",
       "metrics": {
-        "price": 2.314e-06,
-        "liquidity": 2397.54,
-        "fdv": 2264.0,
-        "volume24": 318048.46,
-        "buys": 6290.0,
-        "sells": 5874.0,
-        "h1": -97.51,
-        "h24": -96.73,
-        "age_h": 1.0655037552780575,
-        "liq_fdv": 1.0589840989399293
+        "price": 3.816e-06,
+        "liquidity": 4526.12,
+        "fdv": 3680.0,
+        "volume24": 3084888.04,
+        "buys": 10213.0,
+        "sells": 9540.0,
+        "h1": -92.07,
+        "h24": -92.07,
+        "age_h": 0.7575124105479982,
+        "liq_fdv": 1.2299239130434783
       },
       "pair": {
         "chainId": "solana",
         "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/8l39ujshgnzckrtwqfdqfzf1iv8ypwgfkaskvrkegypc",
-        "pairAddress": "8L39UjsHgnZCKrTwqFDqfZF1iV8YpWGfkAskvrkEgyPc",
+        "url": "https://dexscreener.com/solana/8fnzvgdcav5fk2hr9hknzvxrkabqnpfuwi1vxrtv65yi",
+        "pairAddress": "8FnzVGdCaV5Fk2hr9hKNZvXrKAbQnPfUwi1vXrTV65yi",
         "baseToken": {
-          "address": "5qfodizArUwfzWxnHqvaK45eVdzv1mj8L6QPY8gUpump",
-          "name": "Tuggin",
-          "symbol": "TUGGIN"
+          "address": "3aom1gqjVhPEgxH2voXXTFCG2hzgM3XLk4iEy5vRpump",
+          "name": "Fish To Go",
+          "symbol": "F2G"
         },
         "quoteToken": {
           "address": "So11111111111111111111111111111111111111112",
           "name": "Wrapped SOL",
           "symbol": "SOL"
         },
-        "priceNative": "0.00000001969",
-        "priceUsd": "0.000002314",
+        "priceNative": "0.00000003280",
+        "priceUsd": "0.000003816",
         "txns": {
           "m5": {
-            "buys": 0,
-            "sells": 1
+            "buys": 465,
+            "sells": 688
           },
           "h1": {
-            "buys": 5702,
-            "sells": 5689
+            "buys": 10213,
+            "sells": 9540
           },
           "h6": {
-            "buys": 6290,
-            "sells": 5874
+            "buys": 10213,
+            "sells": 9540
           },
           "h24": {
-            "buys": 6290,
-            "sells": 5874
+            "buys": 10213,
+            "sells": 9540
           }
         },
         "volume": {
-          "h24": 318048.46,
-          "h6": 318048.46,
-          "h1": 265782.69,
-          "m5": 66.07
+          "h24": 3084888.04,
+          "h6": 3084888.04,
+          "h1": 3084888.04,
+          "m5": 149326.58
         },
         "priceChange": {
-          "m5": -3.04,
-          "h1": -97.51,
-          "h6": -96.73,
-          "h24": -96.73
+          "m5": -93.29,
+          "h1": -92.07,
+          "h6": -92.07,
+          "h24": -92.07
         },
         "liquidity": {
-          "usd": 2397.54,
-          "base": 972626390,
-          "quote": 1.2483
+          "usd": 4526.12,
+          "base": 855607252,
+          "quote": 10.832
         },
-        "fdv": 2264,
-        "marketCap": 2264,
-        "pairCreatedAt": 1790296241000,
+        "fdv": 3680,
+        "marketCap": 3680,
+        "pairCreatedAt": 1790315533000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/8G3QSTMZV2hXBjW9?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/rFyZJiCVGaFTp7wG?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/5qfodizArUwfzWxnHqvaK45eVdzv1mj8L6QPY8gUpump?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/520Fb8tZx87BiNhM?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/M_eXuImMiSsdz_z3?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/3aom1gqjVhPEgxH2voXXTFCG2hzgM3XLk4iEy5vRpump?timestamp=1790318100000",
           "websites": [
             {
-              "url": "https://tugginpepe.xyz/",
+              "url": "https://fishtogo.live/",
               "label": "Website"
             }
           ],
           "socials": [
             {
-              "url": "https://x.com/tuggin_pepe",
+              "url": "https://x.com/fishtogo_sol",
               "type": "twitter"
             },
             {
-              "url": "https://t.me/tuggin_pepe",
+              "url": "https://t.me/fishtogo_sol",
+              "type": "telegram"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 3.816e-06,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 0.7575124105479982,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.2424875894520018,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 4526.12,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 245473.88,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 3084888.04,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 3680.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 496320.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 1.2299239130434783,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 19753.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.070545073375262,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -92.07,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 87.07,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -92.07,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 77.07,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:6uv5Qm6pkgVMwELQaX4ZwrwGSQTLt1ohx9115njZpump",
+      "symbol": "BANK",
+      "metrics": {
+        "price": 3.121e-06,
+        "liquidity": 3042.11,
+        "fdv": 3121.0,
+        "volume24": 119661.09,
+        "buys": 1876.0,
+        "sells": 1747.0,
+        "h1": -93.47,
+        "h24": -93.47,
+        "age_h": 0.5011614874998729,
+        "liq_fdv": 0.9747228452419097
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/64kfoioahe9b4e3wfsep6la7nabuckhy459qt4iwcntf",
+        "pairAddress": "64kFoioAhe9b4e3wfSEp6LA7NABucKHy459qt4iwCnTf",
+        "baseToken": {
+          "address": "6uv5Qm6pkgVMwELQaX4ZwrwGSQTLt1ohx9115njZpump",
+          "name": "BankRoll",
+          "symbol": "BANK"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.00000002682",
+        "priceUsd": "0.000003121",
+        "txns": {
+          "m5": {
+            "buys": 2,
+            "sells": 6
+          },
+          "h1": {
+            "buys": 1876,
+            "sells": 1747
+          },
+          "h6": {
+            "buys": 1876,
+            "sells": 1747
+          },
+          "h24": {
+            "buys": 1876,
+            "sells": 1747
+          }
+        },
+        "volume": {
+          "h24": 119661.09,
+          "h6": 119661.09,
+          "h1": 119661.09,
+          "m5": 62.79
+        },
+        "priceChange": {
+          "m5": -2.97,
+          "h1": -93.47,
+          "h6": -93.47,
+          "h24": -93.47
+        },
+        "liquidity": {
+          "usd": 3042.11,
+          "base": 814885661,
+          "quote": 4.2861
+        },
+        "fdv": 3121,
+        "marketCap": 3121,
+        "pairCreatedAt": 1790316456000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/5mViUVdH1TnroCkz?width=800&height=800&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/6uv5Qm6pkgVMwELQaX4ZwrwGSQTLt1ohx9115njZpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://usebankroll.xyz/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/BankRoll_Sol",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 3.121e-06,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 0.5011614874998729,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.4988385125001271,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 3042.11,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 246957.89,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 119661.09,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 380338.91000000003,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 3121.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 496879.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.9747228452419097,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 3623.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.0738408700629651,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -93.47,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 88.47,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -93.47,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 78.47,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "bsc:0x72dF97bF189C7a8CB6422acb7877e201d3f430A8",
+      "symbol": "拉布布",
+      "metrics": {
+        "price": 0.0007722,
+        "liquidity": 48979.28,
+        "fdv": 772231.0,
+        "volume24": 435811.94,
+        "buys": 1622.0,
+        "sells": 318.0,
+        "h1": 388.0,
+        "h24": 75626.0,
+        "age_h": 1.7489852115843032,
+        "liq_fdv": 0.06342568480156845
+      },
+      "pair": {
+        "chainId": "bsc",
+        "dexId": "pancakeswap",
+        "url": "https://dexscreener.com/bsc/0x3d76bc73908303c44ee77835856e8641a20dcfee",
+        "pairAddress": "0x3D76BC73908303c44eE77835856e8641a20dCFee",
+        "labels": [
+          "v3"
+        ],
+        "baseToken": {
+          "address": "0x72dF97bF189C7a8CB6422acb7877e201d3f430A8",
+          "name": "labubu",
+          "symbol": "拉布布"
+        },
+        "quoteToken": {
+          "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+          "name": "Wrapped BNB",
+          "symbol": "WBNB"
+        },
+        "priceNative": "0.0000009989",
+        "priceUsd": "0.0007722",
+        "txns": {
+          "m5": {
+            "buys": 68,
+            "sells": 13
+          },
+          "h1": {
+            "buys": 869,
+            "sells": 154
+          },
+          "h6": {
+            "buys": 1622,
+            "sells": 318
+          },
+          "h24": {
+            "buys": 1622,
+            "sells": 318
+          }
+        },
+        "volume": {
+          "h24": 435811.94,
+          "h6": 435811.94,
+          "h1": 207263.47,
+          "m5": 26670.5
+        },
+        "priceChange": {
+          "m5": 21.84,
+          "h1": 388,
+          "h6": 75626,
+          "h24": 75626
+        },
+        "liquidity": {
+          "usd": 48979.28,
+          "base": 32058095,
+          "quote": 31.3339
+        },
+        "fdv": 772231,
+        "marketCap": 772231,
+        "pairCreatedAt": 1790311964000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/D2gHBD_hj-9LX4TV?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/JUunU4leaQzHq0IB?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0x72df97bf189c7a8cb6422acb7877e201d3f430a8?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://www.labububsc.fun",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/labububsc_x",
+              "type": "twitter"
+            },
+            {
+              "url": "https://t.me/labububsc_group",
               "type": "telegram"
             }
           ]
@@ -2814,582 +1628,13 @@
           "age_h",
           "liquidity",
           "volume24",
-          "fdv",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 2.314e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 1.0655037552780575,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 0.9344962447219425,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 2397.54,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 247602.46,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 318048.46,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 181951.53999999998,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 2264.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 497736.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 1.0589840989399293,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 12164.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.0708205652025877,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": -97.51,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 92.51,
-            "above_by": 0
-          },
-          "h24": {
-            "value": -96.73,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 81.73,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:XGziHyy5soB9aqEXZjvFmPqG57edfEqVNvVV8r77YA6",
-      "symbol": "Latrina",
-      "metrics": {
-        "price": 3.502e-06,
-        "liquidity": null,
-        "fdv": 3502.07,
-        "volume24": 69081.48,
-        "buys": 590.0,
-        "sells": 551.0,
-        "h1": -61.58,
-        "h24": -61.58,
-        "age_h": 0.881932144496176,
-        "liq_fdv": null
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/6nzxaqdwxdpmjyxfmsk6h74uvduf4lrumukkjkvydylz",
-        "pairAddress": "6NzxAQDWXdPmJyxFMSK6H74uVDuf4LrUMUkKJKVydyLz",
-        "baseToken": {
-          "address": "XGziHyy5soB9aqEXZjvFmPqG57edfEqVNvVV8r77YA6",
-          "name": "Latrinas",
-          "symbol": "Latrina"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00000002980",
-        "priceUsd": "0.000003502",
-        "txns": {
-          "m5": {
-            "buys": 1,
-            "sells": 1
-          },
-          "h1": {
-            "buys": 590,
-            "sells": 551
-          },
-          "h6": {
-            "buys": 590,
-            "sells": 551
-          },
-          "h24": {
-            "buys": 590,
-            "sells": 551
-          }
-        },
-        "volume": {
-          "h24": 69081.48,
-          "h6": 69081.48,
-          "h1": 69081.48,
-          "m5": 8.13
-        },
-        "priceChange": {
-          "m5": -0.13,
-          "h1": -61.58,
-          "h6": -61.58,
-          "h24": -61.58
-        },
-        "fdv": 3502.07,
-        "marketCap": 3502.07,
-        "pairCreatedAt": 1790296902000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/P2i5swTxjftPeaK9?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/3Ty3CVS7UUc3jCKJ?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/XGziHyy5soB9aqEXZjvFmPqG57edfEqVNvVV8r77YA6?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://x.com/search?q=latrinas&src=typed_query",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/IndianLatrina/status/2103283683272876070",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "age_h",
-          "liquidity",
-          "volume24",
-          "fdv",
-          "liq_fdv",
-          "h1",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 3.502e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 0.881932144496176,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 1.1180678555038241,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": null,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 69081.48,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 430918.52,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 3502.07,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 496497.93,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": null,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 1141.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.0707803992740472,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": -61.58,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 56.58,
-            "above_by": 0
-          },
-          "h24": {
-            "value": -61.58,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 46.58,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:BozphR8Ehb4zxLKYSh9aPApaZnLN5QiDs8KXjtnB4sEG",
-      "symbol": "ROBIN",
-      "metrics": {
-        "price": 7.766e-06,
-        "liquidity": 7946.61,
-        "fdv": 7766.0,
-        "volume24": 104743.24,
-        "buys": 855.0,
-        "sells": 640.0,
-        "h1": 0.51,
-        "h24": -84.86,
-        "age_h": 10.510026026765505,
-        "liq_fdv": 1.0232565027040947
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "raydium",
-        "url": "https://dexscreener.com/solana/daxvbvh3twxuv9mqzmdunzkfmtrhdzasymvqdqo8v1qm",
-        "pairAddress": "DAxVBVH3twXUV9mQzmdunZkFMtrHdzaSyMVQdQo8V1qm",
-        "labels": [
-          "CPMM"
-        ],
-        "baseToken": {
-          "address": "BozphR8Ehb4zxLKYSh9aPApaZnLN5QiDs8KXjtnB4sEG",
-          "name": "Robin Hood",
-          "symbol": "ROBIN"
-        },
-        "quoteToken": {
-          "address": "XsvNBAYkrDRNhA7wPHQfX3ZUXZyZLdnCQDfHZ56bzpg",
-          "name": "Robinhood xStock",
-          "symbol": "HOODx"
-        },
-        "priceNative": "0.00000006410",
-        "priceUsd": "0.000007766",
-        "txns": {
-          "m5": {
-            "buys": 5,
-            "sells": 4
-          },
-          "h1": {
-            "buys": 89,
-            "sells": 63
-          },
-          "h6": {
-            "buys": 109,
-            "sells": 98
-          },
-          "h24": {
-            "buys": 855,
-            "sells": 640
-          }
-        },
-        "volume": {
-          "h24": 104743.24,
-          "h6": 13929.3,
-          "h1": 12310.89,
-          "m5": 584.45
-        },
-        "priceChange": {
-          "m5": -9.04,
-          "h1": 0.51,
-          "h6": -17.33,
-          "h24": -84.86
-        },
-        "liquidity": {
-          "usd": 7946.61,
-          "base": 511620390,
-          "quote": 32.7974
-        },
-        "fdv": 7766,
-        "marketCap": 7766,
-        "pairCreatedAt": 1790262241000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/5GlL3mvPDd3DXnz1?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/K-2RXJwY6MUWnX9d?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/BozphR8Ehb4zxLKYSh9aPApaZnLN5QiDs8KXjtnB4sEG?timestamp=1790299800000",
-          "websites": [],
-          "socials": [
-            {
-              "url": "https://x.com/robinonstonk",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "liquidity",
-          "volume24",
-          "fdv",
-          "h24"
-        ],
-        "checks": {
-          "price": {
-            "value": 7.766e-06,
-            "minimum": 0,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "age_h": {
-            "value": 10.510026026765505,
-            "minimum": 2,
-            "maximum": 720,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "liquidity": {
-            "value": 7946.61,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 242053.39,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 104743.24,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 395256.76,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 7766.0,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 492234.0,
-            "above_by": 0
-          },
-          "liq_fdv": {
-            "value": 1.0232565027040947,
-            "minimum": 0.05,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "transactions": {
-            "value": 1495.0,
-            "minimum": 500,
-            "maximum": null,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": null
-          },
-          "buy_sell_ratio": {
-            "value": 1.3359375,
-            "minimum": 0.8,
-            "maximum": 2.5,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h1": {
-            "value": 0.51,
-            "minimum": -5,
-            "maximum": 25,
-            "passed": true,
-            "missing_or_invalid": false,
-            "below_by": 0,
-            "above_by": 0
-          },
-          "h24": {
-            "value": -84.86,
-            "minimum": -15,
-            "maximum": 100,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 69.86,
-            "above_by": 0
-          }
-        }
-      },
-      "execution_gate_passed": false,
-      "diagnostic_disagreement": false
-    },
-    {
-      "key": "solana:GYJ7Yh9wx7AQezECo9F2rY2HM5BPissMkRQhqe28ocp",
-      "symbol": "OCP",
-      "metrics": {
-        "price": 5.29e-06,
-        "liquidity": null,
-        "fdv": 5290.24,
-        "volume24": 115827.95,
-        "buys": 837.0,
-        "sells": 1157.0,
-        "h1": -73.91,
-        "h24": -4.0,
-        "age_h": 24.04617603229152,
-        "liq_fdv": null
-      },
-      "pair": {
-        "chainId": "solana",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/bgdfrchyg6dsgwux2xepohtm4uzkwzcxydzmdkxxgrnc",
-        "pairAddress": "BgdFrchYg6dSgWUX2XePoHTM4UzKwzCxYDZmdkXxGrNC",
-        "baseToken": {
-          "address": "GYJ7Yh9wx7AQezECo9F2rY2HM5BPissMkRQhqe28ocp",
-          "name": "Onchain Parent",
-          "symbol": "OCP"
-        },
-        "quoteToken": {
-          "address": "So11111111111111111111111111111111111111112",
-          "name": "Wrapped SOL",
-          "symbol": "SOL"
-        },
-        "priceNative": "0.00000004503",
-        "priceUsd": "0.000005290",
-        "txns": {
-          "m5": {
-            "buys": 2,
-            "sells": 5
-          },
-          "h1": {
-            "buys": 223,
-            "sells": 257
-          },
-          "h6": {
-            "buys": 577,
-            "sells": 883
-          },
-          "h24": {
-            "buys": 837,
-            "sells": 1157
-          }
-        },
-        "volume": {
-          "h24": 115827.95,
-          "h6": 85835.47,
-          "h1": 29436.73,
-          "m5": 322.51
-        },
-        "priceChange": {
-          "m5": -8.61,
-          "h1": -73.91,
-          "h6": 60.99,
-          "h24": -4
-        },
-        "fdv": 5290.24,
-        "marketCap": 5290.24,
-        "pairCreatedAt": 1790213511000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/pYQxignvGKrTcRYw?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/LIaC5gtc_rAvOxjw?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/GYJ7Yh9wx7AQezECo9F2rY2HM5BPissMkRQhqe28ocp?timestamp=1790299800000",
-          "websites": [
-            {
-              "url": "https://onchainparent.fun/",
-              "label": "Website"
-            }
-          ],
-          "socials": [
-            {
-              "url": "https://x.com/onchainparent",
-              "type": "twitter"
-            }
-          ]
-        }
-      },
-      "gate": {
-        "passed": false,
-        "failures": [
-          "liquidity",
-          "volume24",
-          "fdv",
-          "liq_fdv",
           "buy_sell_ratio",
-          "h1"
+          "h1",
+          "h24"
         ],
         "checks": {
           "price": {
-            "value": 5.29e-06,
+            "value": 0.0007722,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -3398,52 +1643,52 @@
             "above_by": null
           },
           "age_h": {
-            "value": 24.04617603229152,
+            "value": 1.7489852115843032,
             "minimum": 2,
             "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.2510147884156968,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 48979.28,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 201020.72,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 435811.94,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 64188.06,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 772231.0,
+            "minimum": 500000,
+            "maximum": 100000000,
             "passed": true,
             "missing_or_invalid": false,
             "below_by": 0,
             "above_by": 0
           },
-          "liquidity": {
-            "value": null,
-            "minimum": 250000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
-            "above_by": null
-          },
-          "volume24": {
-            "value": 115827.95,
-            "minimum": 500000,
-            "maximum": null,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 384172.05,
-            "above_by": null
-          },
-          "fdv": {
-            "value": 5290.24,
-            "minimum": 500000,
-            "maximum": 100000000,
-            "passed": false,
-            "missing_or_invalid": false,
-            "below_by": 494709.76,
-            "above_by": 0
-          },
           "liq_fdv": {
-            "value": null,
+            "value": 0.06342568480156845,
             "minimum": 0.05,
             "maximum": null,
-            "passed": false,
-            "missing_or_invalid": true,
-            "below_by": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
             "above_by": null
           },
           "transactions": {
-            "value": 1994.0,
+            "value": 1940.0,
             "minimum": 500,
             "maximum": null,
             "passed": true,
@@ -3452,31 +1697,31 @@
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 0.7234226447709594,
+            "value": 5.10062893081761,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 0.07657735522904063,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 2.60062893081761
           },
           "h1": {
-            "value": -73.91,
+            "value": 388.0,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 68.91,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 363.0
           },
           "h24": {
-            "value": -4.0,
+            "value": 75626.0,
             "minimum": -15,
             "maximum": 100,
-            "passed": true,
+            "passed": false,
             "missing_or_invalid": false,
             "below_by": 0,
-            "above_by": 0
+            "above_by": 75526.0
           }
         }
       },
@@ -3484,83 +1729,87 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:G9D3wNrtJr18pw5zWFUQbrT3Q6nPzVHrmWBxKapspump",
-      "symbol": "pumpies",
+      "key": "solana:9yzig5ww8eLXbY338WzZkpSPbxcWir1CzWwvsEKdpump",
+      "symbol": "GFORGE",
       "metrics": {
-        "price": 4.062e-06,
+        "price": 6.135e-06,
         "liquidity": null,
-        "fdv": 4062.85,
-        "volume24": 9747.08,
-        "buys": 82.0,
-        "sells": 69.0,
-        "h1": -45.49,
-        "h24": -34.83,
-        "age_h": 1.0612143402629428,
+        "fdv": 6135.72,
+        "volume24": 10146.87,
+        "buys": 116.0,
+        "sells": 83.0,
+        "h1": 75.8,
+        "h24": 87.03,
+        "age_h": 3.7512464602126014,
         "liq_fdv": null
       },
       "pair": {
         "chainId": "solana",
         "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/ddnkwamxylfsz8xrupdgalqw8uqjsrbfhztnxgkkkzzp",
-        "pairAddress": "DDNKwaMxyLfSz8xrUpdgALQw8uQjSRBfhztNxGkkKzzP",
+        "url": "https://dexscreener.com/solana/3a4yaknuovparps4urwwaio1kwhbjrp5fxc1jgjjzeab",
+        "pairAddress": "3a4YakNUoVPARpS4Urwwaio1kwhbJRp5fXC1JGJJZEAB",
         "baseToken": {
-          "address": "G9D3wNrtJr18pw5zWFUQbrT3Q6nPzVHrmWBxKapspump",
-          "name": "pumpies.store",
-          "symbol": "pumpies"
+          "address": "9yzig5ww8eLXbY338WzZkpSPbxcWir1CzWwvsEKdpump",
+          "name": "Grok Forge",
+          "symbol": "GFORGE"
         },
         "quoteToken": {
-          "address": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
-          "name": "Pump",
-          "symbol": "PUMP"
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
         },
-        "priceNative": "0.001035",
-        "priceUsd": "0.000004062",
+        "priceNative": "0.00000005264",
+        "priceUsd": "0.000006135",
         "txns": {
           "m5": {
             "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 24,
-            "sells": 26
+            "buys": 102,
+            "sells": 72
           },
           "h6": {
-            "buys": 82,
-            "sells": 69
+            "buys": 116,
+            "sells": 83
           },
           "h24": {
-            "buys": 82,
-            "sells": 69
+            "buys": 116,
+            "sells": 83
           }
         },
         "volume": {
-          "h24": 9747.08,
-          "h6": 9747.08,
-          "h1": 3792.39,
+          "h24": 10146.87,
+          "h6": 10146.87,
+          "h1": 8221.08,
           "m5": 0
         },
         "priceChange": {
-          "h1": -45.49,
-          "h6": -34.83,
-          "h24": -34.83
+          "h1": 75.8,
+          "h6": 87.03,
+          "h24": 87.03
         },
-        "fdv": 4062.85,
-        "marketCap": 4062.85,
-        "pairCreatedAt": 1790296257000,
+        "fdv": 6135.72,
+        "marketCap": 6135.72,
+        "pairCreatedAt": 1790304756000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/cZpT9N-soXCbVYes?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/-iabMV6IuAWehzhf?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/G9D3wNrtJr18pw5zWFUQbrT3Q6nPzVHrmWBxKapspump?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/h-dJJ5LyzmUj1Mhq?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/xlKVz6MRwi4VqjRU?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/9yzig5ww8eLXbY338WzZkpSPbxcWir1CzWwvsEKdpump?timestamp=1790318100000",
           "websites": [
             {
-              "url": "https://pumpies.store/",
+              "url": "https://gforge-one.vercel.app/",
               "label": "Website"
             }
           ],
           "socials": [
             {
-              "url": "https://x.com/Nostalgicgareth/status/2103280931108728866?s=20",
+              "url": "https://x.com/ZVanzo",
               "type": "twitter"
+            },
+            {
+              "url": "https://t.me/GFORGEroom",
+              "type": "telegram"
             }
           ]
         }
@@ -3568,18 +1817,16 @@
       "gate": {
         "passed": false,
         "failures": [
-          "age_h",
           "liquidity",
           "volume24",
           "fdv",
           "liq_fdv",
           "transactions",
-          "h1",
-          "h24"
+          "h1"
         ],
         "checks": {
           "price": {
-            "value": 4.062e-06,
+            "value": 6.135e-06,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -3588,12 +1835,12 @@
             "above_by": null
           },
           "age_h": {
-            "value": 1.0612143402629428,
+            "value": 3.7512464602126014,
             "minimum": 2,
             "maximum": 720,
-            "passed": false,
+            "passed": true,
             "missing_or_invalid": false,
-            "below_by": 0.9387856597370572,
+            "below_by": 0,
             "above_by": 0
           },
           "liquidity": {
@@ -3606,21 +1853,21 @@
             "above_by": null
           },
           "volume24": {
-            "value": 9747.08,
+            "value": 10146.87,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 490252.92,
+            "below_by": 489853.13,
             "above_by": null
           },
           "fdv": {
-            "value": 4062.85,
+            "value": 6135.72,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 495937.15,
+            "below_by": 493864.28,
             "above_by": 0
           },
           "liq_fdv": {
@@ -3633,16 +1880,16 @@
             "above_by": null
           },
           "transactions": {
-            "value": 151.0,
+            "value": 199.0,
             "minimum": 500,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 349.0,
+            "below_by": 301.0,
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 1.1884057971014492,
+            "value": 1.3975903614457832,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": true,
@@ -3651,21 +1898,21 @@
             "above_by": 0
           },
           "h1": {
-            "value": -45.49,
+            "value": 75.8,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 40.49,
-            "above_by": 0
+            "below_by": 0,
+            "above_by": 50.8
           },
           "h24": {
-            "value": -34.83,
+            "value": 87.03,
             "minimum": -15,
             "maximum": 100,
-            "passed": false,
+            "passed": true,
             "missing_or_invalid": false,
-            "below_by": 19.83,
+            "below_by": 0,
             "above_by": 0
           }
         }
@@ -3674,82 +1921,656 @@
       "diagnostic_disagreement": false
     },
     {
-      "key": "solana:7GrTtTGcX7d5WXYMjbkNrRvkp2cV3VTBJqizCfWBpump",
-      "symbol": "VOTEPAD",
+      "key": "solana:tjvVbqnFaU1RjPtcMnbe6fFX98UsX668tKb7Jskpump",
+      "symbol": "OPAQUE",
       "metrics": {
-        "price": 4.323e-06,
-        "liquidity": null,
-        "fdv": 4323.97,
-        "volume24": 63742.83,
-        "buys": 830.0,
-        "sells": 684.0,
-        "h1": -69.28,
-        "h24": 28.98,
-        "age_h": 1.256253780523936,
-        "liq_fdv": null
+        "price": 2.686e-05,
+        "liquidity": 12832.73,
+        "fdv": 26866.0,
+        "volume24": 78084.73,
+        "buys": 1032.0,
+        "sells": 895.0,
+        "h1": -43.96,
+        "h24": -43.96,
+        "age_h": 0.41573134395811295,
+        "liq_fdv": 0.4776568897491253
       },
       "pair": {
         "chainId": "solana",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/8zjuacxdjfs1n9bgnjdeiij5gxxkcumn9aru2mbdatza",
-        "pairAddress": "8zjuACXdJFS1n9bGnJdeiiJ5GXXkCuMn9ARU2mbdAtza",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/3gmmxs2ve6rwt5syfulkw4c57audtnftb5iapgcmdj6x",
+        "pairAddress": "3gMmxS2vE6RwT5syfULkw4c57aUDtnFtb5iapGcMDJ6x",
         "baseToken": {
-          "address": "7GrTtTGcX7d5WXYMjbkNrRvkp2cV3VTBJqizCfWBpump",
-          "name": "votepad.fun",
-          "symbol": "VOTEPAD"
+          "address": "tjvVbqnFaU1RjPtcMnbe6fFX98UsX668tKb7Jskpump",
+          "name": "Opaque",
+          "symbol": "OPAQUE"
         },
         "quoteToken": {
           "address": "So11111111111111111111111111111111111111112",
           "name": "Wrapped SOL",
           "symbol": "SOL"
         },
-        "priceNative": "0.00000003678",
-        "priceUsd": "0.000004323",
+        "priceNative": "0.0000002309",
+        "priceUsd": "0.00002686",
+        "txns": {
+          "m5": {
+            "buys": 91,
+            "sells": 37
+          },
+          "h1": {
+            "buys": 1032,
+            "sells": 895
+          },
+          "h6": {
+            "buys": 1032,
+            "sells": 895
+          },
+          "h24": {
+            "buys": 1032,
+            "sells": 895
+          }
+        },
+        "volume": {
+          "h24": 78084.73,
+          "h6": 78084.73,
+          "h1": 78084.73,
+          "m5": 7225.82
+        },
+        "priceChange": {
+          "m5": 151,
+          "h1": -43.96,
+          "h6": -43.96,
+          "h24": -43.96
+        },
+        "liquidity": {
+          "usd": 12832.73,
+          "base": 278192919,
+          "quote": 46.05694
+        },
+        "fdv": 26866,
+        "marketCap": 26866,
+        "pairCreatedAt": 1790316764000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/4tsSC2XyYYFMgaEI?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/JGhj8bzwekJW5cB8?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/tjvVbqnFaU1RjPtcMnbe6fFX98UsX668tKb7Jskpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://opaque.finance/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/OpaquePrivacy",
+              "type": "twitter"
+            }
+          ]
+        },
+        "boosts": {
+          "active": 10
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 2.686e-05,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 0.41573134395811295,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.584268656041887,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 12832.73,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 237167.27,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 78084.73,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 421915.27,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 26866.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 473134.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.4776568897491253,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 1927.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.153072625698324,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -43.96,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 38.96,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -43.96,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 28.96,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:BwGU1xFkXuKTXeuAFP8CF5v15cHKiJiGCCQUH8cXpump",
+      "symbol": "PUMPAGENT",
+      "metrics": {
+        "price": 2.106e-05,
+        "liquidity": null,
+        "fdv": 21060.88,
+        "volume24": 36520.61,
+        "buys": 501.0,
+        "sells": 265.0,
+        "h1": 94.88,
+        "h24": 377.0,
+        "age_h": 1.3430316229661305,
+        "liq_fdv": null
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/hvfejqeil34fhossy4t3xgfuevbbahathq3pcr2t896m",
+        "pairAddress": "HvfeJQEiL34fHosSY4t3xGfuevbbAhaTHq3pcr2t896m",
+        "baseToken": {
+          "address": "BwGU1xFkXuKTXeuAFP8CF5v15cHKiJiGCCQUH8cXpump",
+          "name": "Pump Agent",
+          "symbol": "PUMPAGENT"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.0000001810",
+        "priceUsd": "0.00002106",
+        "txns": {
+          "m5": {
+            "buys": 11,
+            "sells": 5
+          },
+          "h1": {
+            "buys": 354,
+            "sells": 177
+          },
+          "h6": {
+            "buys": 501,
+            "sells": 265
+          },
+          "h24": {
+            "buys": 501,
+            "sells": 265
+          }
+        },
+        "volume": {
+          "h24": 36520.61,
+          "h6": 36520.61,
+          "h1": 26609.67,
+          "m5": 1080.03
+        },
+        "priceChange": {
+          "m5": 6.54,
+          "h1": 94.88,
+          "h6": 377,
+          "h24": 377
+        },
+        "fdv": 21060.88,
+        "marketCap": 21060.88,
+        "pairCreatedAt": 1790313426000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/KdhNS51goGwURb7t?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/w375ou4Pm9UsyaV2?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/BwGU1xFkXuKTXeuAFP8CF5v15cHKiJiGCCQUH8cXpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://www.pumpagent.space/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/pumpagentspace",
+              "type": "twitter"
+            }
+          ]
+        },
+        "boosts": {
+          "active": 30
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "liq_fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 2.106e-05,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.3430316229661305,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.6569683770338695,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": null,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 36520.61,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 463479.39,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 21060.88,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 478939.12,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": null,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 766.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.890566037735849,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": 94.88,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 69.88
+          },
+          "h24": {
+            "value": 377.0,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 277.0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:6mW6HDoHXtqNUnpVk7T894ENi4uXzuz8Pxh43HFAMfrb",
+      "symbol": "DOH",
+      "metrics": {
+        "price": 3.684e-06,
+        "liquidity": null,
+        "fdv": 3684.54,
+        "volume24": 45682.3,
+        "buys": 432.0,
+        "sells": 382.0,
+        "h1": -74.67,
+        "h24": -16.81,
+        "age_h": 1.2391809381379022,
+        "liq_fdv": null
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/4fqhklyzxhoixmjuh3xl3fjhynnkfaq8futrheaimrv9",
+        "pairAddress": "4fqhkLyZxhoiXmjuH3XL3FjhyNnKfaQ8futrhEaimrV9",
+        "baseToken": {
+          "address": "6mW6HDoHXtqNUnpVk7T894ENi4uXzuz8Pxh43HFAMfrb",
+          "name": "Department of Homelessness",
+          "symbol": "DOH"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.00000003165",
+        "priceUsd": "0.000003684",
         "txns": {
           "m5": {
             "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 213,
-            "sells": 255
+            "buys": 256,
+            "sells": 243
           },
           "h6": {
-            "buys": 830,
-            "sells": 684
+            "buys": 432,
+            "sells": 382
           },
           "h24": {
-            "buys": 830,
-            "sells": 684
+            "buys": 432,
+            "sells": 382
           }
         },
         "volume": {
-          "h24": 63742.83,
-          "h6": 63742.83,
-          "h1": 16765.04,
+          "h24": 45682.3,
+          "h6": 45682.3,
+          "h1": 26607.78,
           "m5": 0
         },
         "priceChange": {
-          "h1": -69.28,
-          "h6": 28.98,
-          "h24": 28.98
+          "h1": -74.67,
+          "h6": -16.81,
+          "h24": -16.81
         },
-        "fdv": 4323.97,
-        "marketCap": 4323.97,
-        "pairCreatedAt": 1790295555000,
+        "fdv": 3684.54,
+        "marketCap": 3684.54,
+        "pairCreatedAt": 1790313800000,
         "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/K7Z41lqyLuKeS2zx?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/1WogTw00lBX7xOoR?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/7GrTtTGcX7d5WXYMjbkNrRvkp2cV3VTBJqizCfWBpump?timestamp=1790299800000",
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/5NQYs2nOosRQPPnU?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/kjSrGVCajrB15Jag?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/6mW6HDoHXtqNUnpVk7T894ENi4uXzuz8Pxh43HFAMfrb?timestamp=1790318100000",
+          "websites": [],
+          "socials": [
+            {
+              "url": "https://x.com/elonmusk/status/2103351727734829090",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "liq_fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 3.684e-06,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.2391809381379022,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.7608190618620978,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": null,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 45682.3,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 454317.7,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 3684.54,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 496315.46,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": null,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": true,
+            "below_by": null,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 814.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.130890052356021,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -74.67,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 69.67,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -16.81,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 1.8099999999999987,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:E8VjZPBgCFY1oB5eg94zpcsPyK6tNEd1hfH5cKV2pump",
+      "symbol": "UHN",
+      "metrics": {
+        "price": 3.627e-06,
+        "liquidity": null,
+        "fdv": 3627.44,
+        "volume24": 82795.89,
+        "buys": 935.0,
+        "sells": 768.0,
+        "h1": -75.43,
+        "h24": 5.37,
+        "age_h": 1.0569972785313924,
+        "liq_fdv": null
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/3ug4vwbkdij1k3gtyptaxyjjcq6x9k48fd8bhevdqje5",
+        "pairAddress": "3Ug4VWBkDij1K3gtYPTaxYjJcQ6X9K48fD8BheVDQJe5",
+        "baseToken": {
+          "address": "E8VjZPBgCFY1oB5eg94zpcsPyK6tNEd1hfH5cKV2pump",
+          "name": "Unhuman",
+          "symbol": "UHN"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.00000003117",
+        "priceUsd": "0.000003627",
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 602,
+            "sells": 593
+          },
+          "h6": {
+            "buys": 935,
+            "sells": 768
+          },
+          "h24": {
+            "buys": 935,
+            "sells": 768
+          }
+        },
+        "volume": {
+          "h24": 82795.89,
+          "h6": 82795.89,
+          "h1": 60349.44,
+          "m5": 0
+        },
+        "priceChange": {
+          "h1": -75.43,
+          "h6": 5.37,
+          "h24": 5.37
+        },
+        "fdv": 3627.44,
+        "marketCap": 3627.44,
+        "pairCreatedAt": 1790314456000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/mZz05upk1SN7WV_V?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/Xv_z_h84bXB5vjNh?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/E8VjZPBgCFY1oB5eg94zpcsPyK6tNEd1hfH5cKV2pump?timestamp=1790318100000",
           "websites": [
             {
-              "url": "https://votepad.fun/",
+              "url": "https://www.unhumanpad.com/",
               "label": "Website"
             }
           ],
           "socials": [
             {
-              "url": "https://x.com/votepadsol",
+              "url": "https://x.com/unhumanpad",
               "type": "twitter"
             }
           ]
@@ -3767,7 +2588,7 @@
         ],
         "checks": {
           "price": {
-            "value": 4.323e-06,
+            "value": 3.627e-06,
             "minimum": 0,
             "maximum": null,
             "passed": true,
@@ -3776,12 +2597,12 @@
             "above_by": null
           },
           "age_h": {
-            "value": 1.256253780523936,
+            "value": 1.0569972785313924,
             "minimum": 2,
             "maximum": 720,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 0.743746219476064,
+            "below_by": 0.9430027214686076,
             "above_by": 0
           },
           "liquidity": {
@@ -3794,21 +2615,21 @@
             "above_by": null
           },
           "volume24": {
-            "value": 63742.83,
+            "value": 82795.89,
             "minimum": 500000,
             "maximum": null,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 436257.17,
+            "below_by": 417204.11,
             "above_by": null
           },
           "fdv": {
-            "value": 4323.97,
+            "value": 3627.44,
             "minimum": 500000,
             "maximum": 100000000,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 495676.03,
+            "below_by": 496372.56,
             "above_by": 0
           },
           "liq_fdv": {
@@ -3821,7 +2642,7 @@
             "above_by": null
           },
           "transactions": {
-            "value": 1514.0,
+            "value": 1703.0,
             "minimum": 500,
             "maximum": null,
             "passed": true,
@@ -3830,7 +2651,7 @@
             "above_by": null
           },
           "buy_sell_ratio": {
-            "value": 1.213450292397661,
+            "value": 1.2174479166666667,
             "minimum": 0.8,
             "maximum": 2.5,
             "passed": true,
@@ -3839,21 +2660,793 @@
             "above_by": 0
           },
           "h1": {
-            "value": -69.28,
+            "value": -75.43,
             "minimum": -5,
             "maximum": 25,
             "passed": false,
             "missing_or_invalid": false,
-            "below_by": 64.28,
+            "below_by": 70.43,
             "above_by": 0
           },
           "h24": {
-            "value": 28.98,
+            "value": 5.37,
             "minimum": -15,
             "maximum": 100,
             "passed": true,
             "missing_or_invalid": false,
             "below_by": 0,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:EMP4NwMhLxXt2fdbNCax7qCMBSQ3WrwSc8PqahSHpump",
+      "symbol": "Hired",
+      "metrics": {
+        "price": 2.943e-06,
+        "liquidity": 2875.53,
+        "fdv": 2703.0,
+        "volume24": 157126.84,
+        "buys": 1680.0,
+        "sells": 2269.0,
+        "h1": -87.0,
+        "h24": -93.64,
+        "age_h": 1.3642596759398777,
+        "liq_fdv": 1.0638290788013318
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/b62ydzp2t5ldhqkajphmgnanesr1fuc2f6jfyg4pvj5w",
+        "pairAddress": "B62yDZp2t5LdHqkaJphMGNaneSR1fUc2f6JFYG4PvJ5w",
+        "baseToken": {
+          "address": "EMP4NwMhLxXt2fdbNCax7qCMBSQ3WrwSc8PqahSHpump",
+          "name": "Hired AI",
+          "symbol": "Hired"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.00000002529",
+        "priceUsd": "0.000002943",
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 263,
+            "sells": 344
+          },
+          "h6": {
+            "buys": 1680,
+            "sells": 2269
+          },
+          "h24": {
+            "buys": 1680,
+            "sells": 2269
+          }
+        },
+        "volume": {
+          "h24": 157126.84,
+          "h6": 157126.84,
+          "h1": 26175.59,
+          "m5": 0
+        },
+        "priceChange": {
+          "h1": -87,
+          "h6": -93.64,
+          "h24": -93.64
+        },
+        "liquidity": {
+          "usd": 2875.53,
+          "base": 835662919,
+          "quote": 3.5702
+        },
+        "fdv": 2703,
+        "marketCap": 2703,
+        "pairCreatedAt": 1790313350000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/f3zePUmjT8WKlozj?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/w-xmjcvdFeNUU4FC?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/EMP4NwMhLxXt2fdbNCax7qCMBSQ3WrwSc8PqahSHpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://hiredai.fun/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/hiredaifun",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "buy_sell_ratio",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 2.943e-06,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.3642596759398777,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.6357403240601223,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 2875.53,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 247124.47,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 157126.84,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 342873.16000000003,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 2703.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 497297.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 1.0638290788013318,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 3949.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 0.7404142794182459,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.059585720581754154,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -87.0,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 82.0,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -93.64,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 78.64,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:6sEf597zqUxoJeW1znjtx8MUPsXFFF7zjjH2KSG8zF9y",
+      "symbol": "company",
+      "metrics": {
+        "price": 0.0001947,
+        "liquidity": 41029.62,
+        "fdv": 187752.0,
+        "volume24": 1453956.64,
+        "buys": 14001.0,
+        "sells": 11256.0,
+        "h1": 110.0,
+        "h24": 313.0,
+        "age_h": 1.3531875581873787,
+        "liq_fdv": 0.218530934424134
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/gcqw4cgdhgv3cgezxesc9mazexyc8p2nbqu27bmh1xe",
+        "pairAddress": "GCQW4cgDHGV3cgEzxesC9MazExYC8P2NBQU27BmH1XE",
+        "baseToken": {
+          "address": "6sEf597zqUxoJeW1znjtx8MUPsXFFF7zjjH2KSG8zF9y",
+          "name": "company",
+          "symbol": "company"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.000001673",
+        "priceUsd": "0.0001947",
+        "txns": {
+          "m5": {
+            "buys": 216,
+            "sells": 150
+          },
+          "h1": {
+            "buys": 5837,
+            "sells": 4444
+          },
+          "h6": {
+            "buys": 14001,
+            "sells": 11256
+          },
+          "h24": {
+            "buys": 14001,
+            "sells": 11256
+          }
+        },
+        "volume": {
+          "h24": 1453956.64,
+          "h6": 1453956.64,
+          "h1": 576977.09,
+          "m5": 16234.78
+        },
+        "priceChange": {
+          "m5": 3.58,
+          "h1": 110,
+          "h6": 313,
+          "h24": 313
+        },
+        "liquidity": {
+          "usd": 41029.62,
+          "base": 110580261,
+          "quote": 167.5519
+        },
+        "fdv": 187752,
+        "marketCap": 187752,
+        "pairCreatedAt": 1790313390000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/S6YfZyWZhjnZX_WV?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/m97FI7u2dPXMnog3?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/6sEf597zqUxoJeW1znjtx8MUPsXFFF7zjjH2KSG8zF9y?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://www.startacompany.fun/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/yourcompanyfun",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 0.0001947,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.3531875581873787,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.6468124418126213,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 41029.62,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 208970.38,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 1453956.64,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 187752.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 312248.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.218530934424134,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 25257.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.2438699360341152,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": 110.0,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 85.0
+          },
+          "h24": {
+            "value": 313.0,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 213.0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:7R9diEUR5aCk6Xf7WRmJhMFp9TiTexeXnXwKRkZWpump",
+      "symbol": "shibabrain",
+      "metrics": {
+        "price": 6.11e-05,
+        "liquidity": 21717.02,
+        "fdv": 58026.0,
+        "volume24": 1363902.24,
+        "buys": 11623.0,
+        "sells": 8951.0,
+        "h1": -76.87,
+        "h24": 27.85,
+        "age_h": 1.4096141788694594,
+        "liq_fdv": 0.37426360596973773
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/5jevz5wwbbodqcgaqrda7ozfyzh9kmmxrpfd6kvghvhr",
+        "pairAddress": "5jevZ5WwbBoDqcGaQRDa7oZfyZh9KMmxrpFD6kVghVHr",
+        "baseToken": {
+          "address": "7R9diEUR5aCk6Xf7WRmJhMFp9TiTexeXnXwKRkZWpump",
+          "name": "SHIBABRAIN",
+          "symbol": "shibabrain"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.0000005252",
+        "priceUsd": "0.00006110",
+        "txns": {
+          "m5": {
+            "buys": 105,
+            "sells": 75
+          },
+          "h1": {
+            "buys": 8640,
+            "sells": 6463
+          },
+          "h6": {
+            "buys": 11623,
+            "sells": 8951
+          },
+          "h24": {
+            "buys": 11623,
+            "sells": 8951
+          }
+        },
+        "volume": {
+          "h24": 1363902.24,
+          "h6": 1363902.24,
+          "h1": 1089781.68,
+          "m5": 6378.91
+        },
+        "priceChange": {
+          "m5": -2.31,
+          "h1": -76.87,
+          "h6": 27.85,
+          "h24": 27.85
+        },
+        "liquidity": {
+          "usd": 21717.02,
+          "base": 193729321,
+          "quote": 84.9049
+        },
+        "fdv": 58026,
+        "marketCap": 58026,
+        "pairCreatedAt": 1790313187000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/z30CiHrKrmqT0-1m?width=800&height=800&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/7R9diEUR5aCk6Xf7WRmJhMFp9TiTexeXnXwKRkZWpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://shibabrain.com/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/shibabrain",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "fdv",
+          "h1"
+        ],
+        "checks": {
+          "price": {
+            "value": 6.11e-05,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.4096141788694594,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.5903858211305406,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 21717.02,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 228282.98,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 1363902.24,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 58026.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 441974.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.37426360596973773,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 20574.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.298514132499162,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -76.87,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 71.87,
+            "above_by": 0
+          },
+          "h24": {
+            "value": 27.85,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          }
+        }
+      },
+      "execution_gate_passed": false,
+      "diagnostic_disagreement": false
+    },
+    {
+      "key": "solana:26bJc6U5NJyjsUt1CojLQ2EVcLQo1tRDDA7EtPbZpump",
+      "symbol": "Jester",
+      "metrics": {
+        "price": 1.545e-05,
+        "liquidity": 9252.69,
+        "fdv": 14740.0,
+        "volume24": 159944.9,
+        "buys": 1947.0,
+        "sells": 1608.0,
+        "h1": -60.01,
+        "h24": -67.15,
+        "age_h": 1.2018747066789204,
+        "liq_fdv": 0.6277265943012212
+      },
+      "pair": {
+        "chainId": "solana",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/emwubjvtknszrh7lxubmjyzmz4iwbeng4h3vjnzad9kc",
+        "pairAddress": "EMWuBjVtKNSZrh7LXUbmJyZmZ4iwBENG4h3vJnzaD9kc",
+        "baseToken": {
+          "address": "26bJc6U5NJyjsUt1CojLQ2EVcLQo1tRDDA7EtPbZpump",
+          "name": "Joculus Caligo",
+          "symbol": "Jester"
+        },
+        "quoteToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "name": "Wrapped SOL",
+          "symbol": "SOL"
+        },
+        "priceNative": "0.0000001328",
+        "priceUsd": "0.00001545",
+        "txns": {
+          "m5": {
+            "buys": 11,
+            "sells": 13
+          },
+          "h1": {
+            "buys": 729,
+            "sells": 572
+          },
+          "h6": {
+            "buys": 1947,
+            "sells": 1608
+          },
+          "h24": {
+            "buys": 1947,
+            "sells": 1608
+          }
+        },
+        "volume": {
+          "h24": 159944.9,
+          "h6": 159944.9,
+          "h1": 56229.89,
+          "m5": 654.52
+        },
+        "priceChange": {
+          "m5": -5.27,
+          "h1": -60.01,
+          "h6": -67.15,
+          "h24": -67.15
+        },
+        "liquidity": {
+          "usd": 9252.69,
+          "base": 363749813,
+          "quote": 31.2134
+        },
+        "fdv": 14740,
+        "marketCap": 14740,
+        "pairCreatedAt": 1790313935000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/hfBBYEOTHxkb1huS?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/NTchxW_rpAHUMv12?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/26bJc6U5NJyjsUt1CojLQ2EVcLQo1tRDDA7EtPbZpump?timestamp=1790318100000",
+          "websites": [
+            {
+              "url": "https://thejestersjournal.com/loops/",
+              "label": "Website"
+            }
+          ],
+          "socials": [
+            {
+              "url": "https://x.com/JoculusCaligo",
+              "type": "twitter"
+            }
+          ]
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "age_h",
+          "liquidity",
+          "volume24",
+          "fdv",
+          "h1",
+          "h24"
+        ],
+        "checks": {
+          "price": {
+            "value": 1.545e-05,
+            "minimum": 0,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "age_h": {
+            "value": 1.2018747066789204,
+            "minimum": 2,
+            "maximum": 720,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 0.7981252933210796,
+            "above_by": 0
+          },
+          "liquidity": {
+            "value": 9252.69,
+            "minimum": 250000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 240747.31,
+            "above_by": null
+          },
+          "volume24": {
+            "value": 159944.9,
+            "minimum": 500000,
+            "maximum": null,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 340055.1,
+            "above_by": null
+          },
+          "fdv": {
+            "value": 14740.0,
+            "minimum": 500000,
+            "maximum": 100000000,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 485260.0,
+            "above_by": 0
+          },
+          "liq_fdv": {
+            "value": 0.6277265943012212,
+            "minimum": 0.05,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "transactions": {
+            "value": 3555.0,
+            "minimum": 500,
+            "maximum": null,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": null
+          },
+          "buy_sell_ratio": {
+            "value": 1.210820895522388,
+            "minimum": 0.8,
+            "maximum": 2.5,
+            "passed": true,
+            "missing_or_invalid": false,
+            "below_by": 0,
+            "above_by": 0
+          },
+          "h1": {
+            "value": -60.01,
+            "minimum": -5,
+            "maximum": 25,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 55.01,
+            "above_by": 0
+          },
+          "h24": {
+            "value": -67.15,
+            "minimum": -15,
+            "maximum": 100,
+            "passed": false,
+            "missing_or_invalid": false,
+            "below_by": 52.150000000000006,
             "above_by": 0
           }
         }
@@ -3863,17 +3456,17 @@
     }
   ],
   "summary": {
-    "evaluated": 20,
+    "evaluated": 18,
     "failure_counts": {
-      "age_h": 16,
-      "liquidity": 20,
-      "volume24": 16,
-      "fdv": 18,
-      "liq_fdv": 10,
-      "h1": 18,
-      "h24": 14,
-      "buy_sell_ratio": 7,
-      "transactions": 3
+      "age_h": 17,
+      "liquidity": 18,
+      "volume24": 15,
+      "fdv": 17,
+      "h1": 16,
+      "liq_fdv": 8,
+      "h24": 10,
+      "transactions": 3,
+      "buy_sell_ratio": 3
     },
     "sole_failure_counts": {},
     "note": "Failures overlap. Sole failures are NOT safe trade permissions; all risk gates still apply."
