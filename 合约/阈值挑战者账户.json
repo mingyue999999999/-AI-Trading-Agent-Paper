@@ -1,7 +1,7 @@
 {
   "version": "V5 CLEAN FUTURES PAPER + ORDERFLOW SHADOW A/B | 12.5% LOWER-THRESHOLD CHALLENGER",
   "created_at": "2026-09-20T04:33:45+00:00",
-  "cash": 9110.549911964064,
+  "cash": 8645.639644087203,
   "positions": {
     "SOL": {
       "side": "LONG",
@@ -11,16 +11,16 @@
       "entry_confidence": 29.309914606643332,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 460.6255889150018,
+      "margin": 460.47984831159283,
       "initial_margin": 460.67465761458,
       "notional_entry": 1382.02397284374,
       "entry_fee": 0.69101198642187,
-      "funding_pnl": -0.04906869957816451,
-      "last_funding_ts": 1790294400000,
-      "best_price": 117.41499999999999,
-      "stop_price": 111.54424999999999,
+      "funding_pnl": -0.19480930298710705,
+      "last_funding_ts": 1790323200000,
+      "best_price": 120.595,
+      "stop_price": 114.56524999999999,
       "take_profit": 125.79836775,
-      "liquidation_price": 76.66716482969228
+      "liquidation_price": 76.67929152652486
     },
     "BNB": {
       "side": "LONG",
@@ -30,16 +30,35 @@
       "entry_confidence": 29.309914606643332,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 460.39816778306084,
+      "margin": 460.2576281628736,
       "initial_margin": 460.60927132731393,
       "notional_entry": 1381.8278139819417,
       "entry_fee": 0.6909139069909709,
-      "funding_pnl": -0.2111035442530671,
-      "last_funding_ts": 1790294400000,
+      "funding_pnl": -0.3516431644403263,
+      "last_funding_ts": 1790323200000,
       "best_price": 780.1500000000001,
       "stop_price": 741.1425,
       "take_profit": 842.7461625000001,
-      "liquidation_price": 513.69763003208
+      "liquidation_price": 513.7759809621958
+    },
+    "BTC": {
+      "side": "LONG",
+      "quantity": 0.016461228785509218,
+      "entry_price": 84601.329525,
+      "entry_time": "2026-09-25T12:11:57+00:00",
+      "entry_confidence": 28.361390201290163,
+      "entry_coverage": 88.0,
+      "leverage": 3.0,
+      "margin": 464.2139469564269,
+      "initial_margin": 464.2139469564269,
+      "notional_entry": 1392.6418408692807,
+      "entry_fee": 0.6963209204346403,
+      "funding_pnl": 0.0,
+      "last_funding_ts": 1790323200000,
+      "best_price": 84601.329525,
+      "stop_price": 81217.276344,
+      "take_profit": 93061.4624775,
+      "liquidation_price": 56712.80678733031
     }
   },
   "trades": [
@@ -531,14 +550,48 @@
       "rate": 0.0001,
       "cashflow": -0.1401788922093658,
       "mark_price": 777.2
+    },
+    {
+      "time": "2026-09-25T12:10:49+00:00",
+      "symbol": "SOL",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 0.0001,
+      "cashflow": -0.14574060340894254,
+      "mark_price": 120.6
+    },
+    {
+      "time": "2026-09-25T12:10:50+00:00",
+      "symbol": "BNB",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 0.0001,
+      "cashflow": -0.14053962018725918,
+      "mark_price": 779.2
+    },
+    {
+      "time": "2026-09-25T12:11:57+00:00",
+      "symbol": "BTC",
+      "event": "OPEN",
+      "side": "LONG",
+      "price": 84601.329525,
+      "quantity": 0.016461228785509218,
+      "notional": 1392.6418408692807,
+      "margin": 464.2139469564269,
+      "leverage": 3.0,
+      "fee": 0.6963209204346403,
+      "confidence": 28.361390201290163,
+      "coverage": 88.0,
+      "regime": "BULL_TREND",
+      "liquidation_price": 56712.80678733031
     }
   ],
   "realized_pnl": 35.82702338951001,
-  "fees_paid": 6.949694684547464,
-  "funding_pnl": -2.8714288339707186,
+  "fees_paid": 7.646015604982105,
+  "funding_pnl": -3.15770905756692,
   "liquidations": 0,
   "peak_equity": 10254.824578775837,
-  "last_equity": 10064.903021435344,
+  "last_equity": 10126.429441352235,
   "consecutive_losses": 3,
   "cooldown_until": "2026-09-24T16:01:19+00:00",
   "daily": {
@@ -1887,33 +1940,113 @@
         "source": "OKX:book_mid",
         "method": "observed_mid"
       }
+    },
+    {
+      "label_version": 2,
+      "time": "2026-09-25T12:11:56+00:00",
+      "epoch": 1790338316,
+      "symbol": "BTC",
+      "side": "LONG",
+      "reference_price": 84649.0,
+      "confidence": 28.361390201290163,
+      "filter_passed": false,
+      "gate": {
+        "schema_version": 2,
+        "symbol": "BTC",
+        "side": "LONG",
+        "market": "SWAP",
+        "observed_at": "2026-09-25T12:11:56+00:00",
+        "available": true,
+        "passes": false,
+        "reason": "pressure",
+        "spread_bps": 0.011826055283949,
+        "bid_depth_usd": 178063.84099,
+        "ask_depth_usd": 433340.84592000005,
+        "imbalance": -0.4175254302026267,
+        "microprice_bps": -0.0026303010779238807,
+        "quality_score": 20.76006838042651,
+        "reference_mid": 84559.05,
+        "price_epoch_ms": 1790338316606,
+        "base_units_per_contract": 0.01
+      },
+      "outcomes": {},
+      "mode": "shadow",
+      "evaluation_reference": {
+        "price": 84559.05,
+        "price_epoch_ms": 1790338316606,
+        "source": "OKX:book_mid",
+        "method": "observed_mid"
+      }
+    },
+    {
+      "label_version": 2,
+      "time": "2026-09-25T12:12:00+00:00",
+      "epoch": 1790338320,
+      "symbol": "ETH",
+      "side": "LONG",
+      "reference_price": 2721.97,
+      "confidence": 30.390610980510942,
+      "filter_passed": false,
+      "gate": {
+        "schema_version": 2,
+        "symbol": "ETH",
+        "side": "LONG",
+        "market": "SWAP",
+        "observed_at": "2026-09-25T12:11:59+00:00",
+        "available": true,
+        "passes": false,
+        "reason": "pressure",
+        "spread_bps": 0.03677870071797,
+        "bid_depth_usd": 212728.62319000004,
+        "ask_depth_usd": 1144184.46287,
+        "imbalance": -0.6864521016483238,
+        "microprice_bps": -0.008044568492021884,
+        "quality_score": 1.9081300421572263,
+        "reference_mid": 2718.965,
+        "price_epoch_ms": 1790338320003,
+        "base_units_per_contract": 0.1
+      },
+      "outcomes": {},
+      "mode": "shadow",
+      "evaluation_reference": {
+        "price": 2718.965,
+        "price_epoch_ms": 1790338320003,
+        "source": "OKX:book_mid",
+        "method": "observed_mid"
+      }
     }
   ],
   "drawdown_observed_since": "2026-09-21T18:05:29.653000+00:00",
   "max_observed_drawdown": 0.023139287549158616,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-25T06:38:44.787000+00:00",
-    "valuation_epoch_ms": 1790318324787,
+    "valuation_at": "2026-09-25T12:12:09.298000+00:00",
+    "valuation_epoch_ms": 1790338329298,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "SOL": {
         "available": true,
-        "reference_mid": 116.14,
-        "price_epoch_ms": 1790318324500,
+        "reference_mid": 120.4,
+        "price_epoch_ms": 1790338328820,
         "source": "OKX:mark-price"
       },
       "BNB": {
         "available": true,
-        "reference_mid": 772.7,
-        "price_epoch_ms": 1790318324706,
+        "reference_mid": 779.2,
+        "price_epoch_ms": 1790338329012,
+        "source": "OKX:mark-price"
+      },
+      "BTC": {
+        "available": true,
+        "reference_mid": 84559.1,
+        "price_epoch_ms": 1790338329207,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10064.903021435344,
+    "equity": 10126.429441352235,
     "not_realtime": true,
-    "current_drawdown": 0.0185202151320627,
+    "current_drawdown": 0.012520461606855604,
     "max_observed_drawdown": 0.023139287549158616,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
