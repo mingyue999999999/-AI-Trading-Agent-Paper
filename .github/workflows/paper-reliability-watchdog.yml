@@ -10,6 +10,10 @@ on:
   schedule:
     - cron: "20,50 * * * *"
       timezone: "Etc/UTC"
+  workflow_run:
+    workflows:
+      - "PAPER账户独立估值快照"
+    types: [completed]
 
 permissions:
   actions: write
@@ -21,6 +25,7 @@ concurrency:
 
 jobs:
   watchdog:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
