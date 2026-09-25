@@ -2,31 +2,8 @@
   "version": 1,
   "mode": "PAPER_ONLY_NEW_LAUNCH_SHADOW",
   "initial_balance": 10000.0,
-  "cash": 9900.0,
-  "positions": {
-    "solana:6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8": {
-      "chain": "solana",
-      "address": "6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8",
-      "symbol": "GROK",
-      "quantity": 22950.819672131147,
-      "entry_price": 0.00427,
-      "highest_price": 0.005112,
-      "invested_usdt": 100.0,
-      "entry_liquidity": 255203.41,
-      "entry_epoch": 1790281783,
-      "entry_time": "2026-09-24T20:30:13+00:00",
-      "score": 78.96,
-      "independent_score": 78.96,
-      "external_evidence": {
-        "sources": [],
-        "bonus": 0.0,
-        "blockers": [],
-        "qualified_wallet_sources": []
-      },
-      "profit_stage": 0,
-      "contract_risk": "UNVERIFIED_SHADOW_ONLY"
-    }
-  },
+  "cash": 9998.065409836066,
+  "positions": {},
   "watchlist": {
     "solana:DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
       "first_seen": 1790104346,
@@ -54,7 +31,8 @@
         "blockers": [],
         "qualified_wallet_sources": []
       },
-      "decision": "ALREADY_HELD"
+      "decision": "ALREADY_HELD",
+      "last_exit_epoch": 1790299882
     },
     "bsc:0xB44BFd8cF6C86086C6f029Cc7720B32A64077777": {
       "first_seen": 1790208560,
@@ -79,13 +57,22 @@
       "price": 0.00427,
       "budget": 100.0,
       "cost": 2.0
+    },
+    {
+      "time": "2026-09-25T01:31:45+00:00",
+      "side": "SELL",
+      "key": "solana:6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8",
+      "price": 0.004405,
+      "quantity": 22950.819672131147,
+      "pnl": -1.9345901639344305,
+      "reason": "TRAILING_STOP"
     }
   ],
-  "realized_pnl": 0.0,
-  "fees_slippage": 2.0,
+  "realized_pnl": -1.9345901639344305,
+  "fees_slippage": 5.032950819672131,
   "peak_equity": 10017.324590163935,
-  "last_equity": 10014.088524590165,
-  "max_drawdown_pct": 0.08958250689625961,
+  "last_equity": 9998.065409836066,
+  "max_drawdown_pct": 0.19225872292067883,
   "created_at": "2026-09-21T12:20:45+00:00",
   "experiment": {
     "id": "liquidity_ratio_v1",
@@ -93,7 +80,7 @@
     "threshold": 0.05,
     "paper_only": true
   },
-  "last_run_at": "2026-09-25T00:24:44+00:00",
+  "last_run_at": "2026-09-25T01:31:45+00:00",
   "valuation": {
     "equity": 10000.0,
     "observed_at": "2026-09-23T03:26:41+00:00",
