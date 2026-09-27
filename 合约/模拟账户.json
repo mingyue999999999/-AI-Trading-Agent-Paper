@@ -11,16 +11,16 @@
       "entry_confidence": 32.19690090801319,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 456.24477481557807,
+      "margin": 456.25977836294794,
       "initial_margin": 458.3333333333334,
       "notional_entry": 1375.0000000000002,
       "entry_fee": 0.6875000000000001,
-      "funding_pnl": -2.0885585177554225,
-      "last_funding_ts": 1790438400000,
+      "funding_pnl": -2.0735549703855263,
+      "last_funding_ts": 1790467200000,
       "best_price": 805.1500000000001,
       "stop_price": 764.8925,
       "take_profit": 850.2739245,
-      "liquidation_price": 519.3480579367944
+      "liquidation_price": 519.3395768278165
     },
     "SOL": {
       "side": "LONG",
@@ -30,16 +30,16 @@
       "entry_confidence": 32.514415585116915,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 458.6501384115503,
+      "margin": 458.62698262318304,
       "initial_margin": 459.0479596309996,
       "notional_entry": 1377.1438788929988,
       "entry_fee": 0.6885719394464994,
-      "funding_pnl": -0.3978212194492756,
-      "last_funding_ts": 1790438400000,
+      "funding_pnl": -0.4209770078165453,
+      "last_funding_ts": 1790467200000,
       "best_price": 122.065,
       "stop_price": 115.96175,
       "take_profit": 128.64879225,
-      "liquidation_price": 78.43413758035223
+      "liquidation_price": 78.43611495288134
     }
   },
   "trades": [
@@ -411,13 +411,31 @@
       "rate": 6.63017011831e-05,
       "cashflow": -0.09487214514044573,
       "mark_price": 121.52
+    },
+    {
+      "time": "2026-09-27T01:05:50+00:00",
+      "symbol": "BNB",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": -1.09311338497e-05,
+      "cashflow": 0.015003547369896017,
+      "mark_price": 771.6
+    },
+    {
+      "time": "2026-09-27T01:05:51+00:00",
+      "symbol": "SOL",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 1.62978367329e-05,
+      "cashflow": -0.02315578836726968,
+      "mark_price": 120.66
     }
   ],
   "realized_pnl": 6.485686874584772,
   "fees_paid": 2.7561933731134234,
   "peak_equity": 10141.562147052495,
-  "last_equity": 10053.470024658955,
-  "funding_pnl": -3.035903603954619,
+  "last_equity": 10044.913581824894,
+  "funding_pnl": -3.0440558449519926,
   "liquidations": 0,
   "consecutive_losses": 0,
   "cooldown_until": null,
@@ -452,6 +470,10 @@
     },
     "2026-09-26": {
       "start_equity": 10066.222219956235,
+      "realized_pnl": 0.0
+    },
+    "2026-09-27": {
+      "start_equity": 10043.262548101326,
       "realized_pnl": 0.0
     }
   },
@@ -748,27 +770,27 @@
   "max_observed_drawdown": 0.01481052425737428,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-26T23:52:24.932000+00:00",
-    "valuation_epoch_ms": 1790466744932,
+    "valuation_at": "2026-09-27T01:07:10.594000+00:00",
+    "valuation_epoch_ms": 1790471230594,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "BNB": {
         "available": true,
-        "reference_mid": 772.7,
-        "price_epoch_ms": 1790466744656,
+        "reference_mid": 771.8,
+        "price_epoch_ms": 1790471230295,
         "source": "OKX:mark-price"
       },
       "SOL": {
         "available": true,
-        "reference_mid": 121.36,
-        "price_epoch_ms": 1790466744852,
+        "reference_mid": 120.77,
+        "price_epoch_ms": 1790471230511,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10053.470024658955,
+    "equity": 10044.913581824894,
     "not_realtime": true,
-    "current_drawdown": 0.008686247849809092,
+    "current_drawdown": 0.009529948525305865,
     "max_observed_drawdown": 0.01481052425737428,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
