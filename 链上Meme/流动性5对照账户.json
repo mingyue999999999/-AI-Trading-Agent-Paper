@@ -2,31 +2,8 @@
   "version": 1,
   "mode": "PAPER_ONLY_NEW_LAUNCH_SHADOW",
   "initial_balance": 10000.0,
-  "cash": 9898.084755737706,
-  "positions": {
-    "bsc:0x39d9B36Aa0E7A1FEe97D6ff614420f7308ba7777": {
-      "chain": "bsc",
-      "address": "0x39d9B36Aa0E7A1FEe97D6ff614420f7308ba7777",
-      "symbol": "MAME",
-      "quantity": 64931.107366728604,
-      "entry_price": 0.001509,
-      "highest_price": 0.001509,
-      "invested_usdt": 99.98065409836067,
-      "entry_liquidity": 128928.19,
-      "entry_epoch": 1790524345,
-      "entry_time": "2026-09-27T15:52:51+00:00",
-      "score": 58.19,
-      "independent_score": 58.19,
-      "external_evidence": {
-        "sources": [],
-        "bonus": 0.0,
-        "blockers": [],
-        "qualified_wallet_sources": []
-      },
-      "profit_stage": 0,
-      "contract_risk": "UNVERIFIED_SHADOW_ONLY"
-    }
-  },
+  "cash": 9981.60044465494,
+  "positions": {},
   "watchlist": {
     "solana:DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
       "first_seen": 1790104346,
@@ -83,7 +60,8 @@
         "blockers": [],
         "qualified_wallet_sources": []
       },
-      "decision": "BUY"
+      "decision": "BUY",
+      "last_exit_epoch": 1790531263
     },
     "solana:nDZknLvfFRp5rgUHdzTrQsmSY5NKzoavqdLjSHVpump": {
       "first_seen": 1790408848,
@@ -139,13 +117,22 @@
       "price": 0.001509,
       "budget": 99.98065409836067,
       "cost": 1.9996130819672135
+    },
+    {
+      "time": "2026-09-27T17:48:18+00:00",
+      "side": "SELL",
+      "key": "bsc:0x39d9B36Aa0E7A1FEe97D6ff614420f7308ba7777",
+      "price": 0.001326,
+      "quantity": 64931.107366728604,
+      "pnl": -16.464965181127013,
+      "reason": "TRAILING_STOP"
     }
   ],
-  "realized_pnl": -1.9345901639344305,
-  "fees_slippage": 7.032563901639344,
+  "realized_pnl": -18.399555345061444,
+  "fees_slippage": 9.615523352687807,
   "peak_equity": 10017.324590163935,
-  "last_equity": 9996.0657967541,
-  "max_drawdown_pct": 0.2122202711760951,
+  "last_equity": 9981.60044465494,
+  "max_drawdown_pct": 0.3566236192852624,
   "created_at": "2026-09-21T12:20:45+00:00",
   "experiment": {
     "id": "liquidity_ratio_v1",
@@ -153,7 +140,7 @@
     "threshold": 0.05,
     "paper_only": true
   },
-  "last_run_at": "2026-09-27T15:52:51+00:00",
+  "last_run_at": "2026-09-27T17:48:18+00:00",
   "valuation": {
     "equity": 10000.0,
     "observed_at": "2026-09-23T03:26:41+00:00",
