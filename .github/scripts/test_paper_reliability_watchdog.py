@@ -1,5 +1,6 @@
 import os
 import unittest
+from datetime import datetime, timezone
 from unittest.mock import patch
 
 os.environ.setdefault("GITHUB_TOKEN", "test-token")
@@ -59,6 +60,29 @@ class WatchdogRecoveryDecisionTests(unittest.TestCase):
             with patch.object(watchdog, "dispatch_and_wait") as dispatch:
                 watchdog.main()
         dispatch.assert_not_called()
+
+    def test_dispatch_returns_after_new_run_is_accepted(self):
+        old = {"id": 1, "status": "completed", "conclusion": "success"}
+        queued = {"id": 2, "status": "queued", "event": "workflow_dispatch"}
+        with patch.object(watchdog, "workflow_runs", side_effect=[[old], [queued, old]]):
+            with patch.object(watchdog, "api_request") as request:
+                watchdog.dispatch_and_wait("spot", "spot.yml")
+        request.assert_called_once()
+
+    def test_dispatch_accepts_recent_overlapping_success(self):
+        now = datetime.now(timezone.utc).isoformat()
+        old = {"id": 1, "status": "completed", "conclusion": "success", "updated_at": now}
+        with patch.object(watchdog, "workflow_runs", side_effect=[[old], [old]]):
+            with patch.object(watchdog, "api_request"):
+                watchdog.dispatch_and_wait("spot", "spot.yml")
+
+    def test_dispatch_fails_if_new_run_finishes_unsuccessfully(self):
+        old = {"id": 1, "status": "completed", "conclusion": "success"}
+        failed = {"id": 2, "status": "completed", "conclusion": "failure"}
+        with patch.object(watchdog, "workflow_runs", side_effect=[[old], [failed, old]]):
+            with patch.object(watchdog, "api_request"):
+                with self.assertRaises(SystemExit):
+                    watchdog.dispatch_and_wait("spot", "spot.yml")
 
 
 if __name__ == "__main__":
