@@ -97,6 +97,17 @@ def component_state(component, workflow_file):
 def all_states():
     return [component_state(component, workflow) for component, workflow in COMPONENTS.items()]
 
+def recovery_decision(states):
+    """Return at most one recovery decision, preserving global writer serialization."""
+    if any(state["active"] for state in states):
+        return "active", None
+
+    candidates = [state for state in states if state["stale"]]
+    if not candidates:
+        return "fresh", None
+
+    return "recover", max(candidates, key=lambda state: state["age_minutes"])
+
 def dispatch_and_wait(component, workflow_file):
     before = {r["id"] for r in workflow_runs(workflow_file)}
     wf = urllib.parse.quote(workflow_file, safe="")
@@ -142,18 +153,26 @@ def print_states(states):
         })
     print(json.dumps({"checked_at": datetime.now(timezone.utc).isoformat(), "components": compact}, ensure_ascii=False))
 
-# Recover strictly one component at a time. Re-evaluate after every successful recovery.
-for _ in range(len(COMPONENTS)):
+def main():
     states = all_states()
     print_states(states)
-    candidates = [s for s in states if s["stale"] and not s["active"]]
-    if not candidates:
-        print("all core PAPER components are fresh or already active")
-        break
-    selected = max(candidates, key=lambda s: s["age_minutes"])
+    decision, selected = recovery_decision(states)
+
+    if decision == "active":
+        print("a core PAPER workflow is already active; deferring recovery to avoid concurrent writers")
+        return
+    if decision == "fresh":
+        print("all core PAPER components are fresh")
+        return
+
+    # Recover only one component per watchdog run. Later watchdog checks can
+    # recover another stale component after this run has completed.
     dispatch_and_wait(selected["component"], selected["workflow"])
-else:
     final_states = all_states()
-    remaining = [s for s in final_states if s["stale"] and not s["active"]]
+    print_states(final_states)
+    remaining = [state for state in final_states if state["stale"] and not state["active"]]
     if remaining:
-        raise SystemExit("watchdog exhausted recovery passes while stale components remain")
+        print("additional stale components deferred to the next watchdog check")
+
+if __name__ == "__main__":
+    main()

@@ -25,6 +25,7 @@ CHECKS = [
     ('futures static safety', ROOT, ['合约/test_v5_static.py']),
     ('basis static safety', ROOT, ['合约/test_basis_static.py']),
     ('schedule configuration', ROOT, ['.github/scripts/check_schedule_config.py']),
+    ('watchdog one-at-a-time recovery decision', ROOT, ['.github/scripts/test_paper_reliability_watchdog.py']),
     ('quant', ROOT/'量化', ['-m', 'unittest', 'discover', '-s', 'tests', '-q']),
     ('meme and independent challengers', ROOT/'链上Meme', ['-m', 'unittest', 'discover', '-p', 'test_*.py', '-q']),
     ('polymarket', ROOT/'Polymarket套利机器人', ['-m', 'unittest', 'discover', '-s', 'tests', '-q']),
