@@ -7,7 +7,9 @@ from pathlib import Path
 from unittest import mock
 
 
-MODULE_PATH = Path(__file__).with_name("refresh_paper_valuations.py")
+MODULE_PATH = Path(__file__).parent / "scripts" / "refresh_paper_valuations.py"
+if not MODULE_PATH.exists():
+    MODULE_PATH = Path(__file__).with_name("refresh_paper_valuations.py")
 SPEC = importlib.util.spec_from_file_location("refresh_paper_valuations", MODULE_PATH)
 valuation = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(valuation)
