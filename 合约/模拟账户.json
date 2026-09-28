@@ -1,28 +1,8 @@
 {
   "version": "V5 CLEAN FUTURES PAPER + ORDERFLOW SHADOW A/B",
   "created_at": "2026-09-19T08:05:59+00:00",
-  "cash": 9526.53045069211,
-  "positions": {
-    "SOL": {
-      "side": "LONG",
-      "quantity": 11.775145652658068,
-      "entry_price": 116.95344750000001,
-      "entry_time": "2026-09-24T17:21:48+00:00",
-      "entry_confidence": 32.514415585116915,
-      "entry_coverage": 73.0,
-      "leverage": 3.0,
-      "margin": 458.5766480122498,
-      "initial_margin": 459.0479596309996,
-      "notional_entry": 1377.1438788929988,
-      "entry_fee": 0.6885719394464994,
-      "funding_pnl": -0.47131161874976735,
-      "last_funding_ts": 1790611200000,
-      "best_price": 124.17500000000001,
-      "stop_price": 117.96625,
-      "take_profit": 128.64879225,
-      "liquidation_price": 78.44041324216192
-    }
-  },
+  "cash": 9991.982923164273,
+  "positions": {},
   "trades": [
     {
       "time": "2026-09-20T23:12:25+00:00",
@@ -497,15 +477,30 @@
       "rate": -8.7803539326e-06,
       "cashflow": 0.012303403626152233,
       "mark_price": 119.0
+    },
+    {
+      "time": "2026-09-28T22:30:36+00:00",
+      "symbol": "SOL",
+      "event": "CLOSE",
+      "side": "LONG",
+      "price": 117.59617250000001,
+      "quantity": 11.775145652658068,
+      "notional": 1384.7120593826035,
+      "fee": 0.6923560296913017,
+      "liquidation_fee": 0.0,
+      "confidence": null,
+      "reason": "止损/移动止损",
+      "realized_pnl": 6.187252520466734,
+      "funding_pnl": -0.47131161874976735
     }
   ],
-  "realized_pnl": -10.728208149356089,
-  "fees_paid": 3.4357699638968446,
+  "realized_pnl": -4.540955628889355,
+  "fees_paid": 4.128125993588147,
   "peak_equity": 10141.562147052495,
-  "last_equity": 10003.435731107867,
+  "last_equity": 9991.982923164273,
   "funding_pnl": -3.476121206836456,
   "liquidations": 0,
-  "consecutive_losses": 1,
+  "consecutive_losses": 0,
   "cooldown_until": null,
   "daily": {
     "2026-09-19": {
@@ -546,7 +541,7 @@
     },
     "2026-09-28": {
       "start_equity": 10076.2486950039,
-      "realized_pnl": -17.21389502394086
+      "realized_pnl": -11.026642503474127
     }
   },
   "_oi_snapshots": {},
@@ -842,21 +837,14 @@
   "max_observed_drawdown": 0.01481052425737428,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-28T21:21:47.766000+00:00",
-    "valuation_epoch_ms": 1790630507766,
+    "valuation_at": "2026-09-28T22:30:55.701000+00:00",
+    "valuation_epoch_ms": 1790634655701,
     "valuation_status": "OK",
     "missing_symbols": [],
-    "price_observations": {
-      "SOL": {
-        "available": true,
-        "reference_mid": 118.51,
-        "price_epoch_ms": 1790630507691,
-        "source": "OKX:mark-price"
-      }
-    },
-    "equity": 10003.435731107867,
+    "price_observations": {},
+    "equity": 9991.982923164273,
     "not_realtime": true,
-    "current_drawdown": 0.01361983626800256,
+    "current_drawdown": 0.014749130530319232,
     "max_observed_drawdown": 0.01481052425737428,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
