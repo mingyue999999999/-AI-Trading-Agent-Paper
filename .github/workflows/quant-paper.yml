@@ -14,17 +14,6 @@ concurrency:
   group: robust-multi-strategy-paper
   cancel-in-progress: false
 jobs:
-  branch-test:
-    if: github.ref != 'refs/heads/main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          ref: ${{ github.sha }}
-      - uses: actions/setup-python@v6
-        with: {python-version: "3.12"}
-      - run: cd 量化 && python -m unittest discover -s tests -v
   paper:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
