@@ -16,6 +16,7 @@ on:
     branches: [main]
     paths:
       - "scripts/refresh_paper_valuations.py"
+      - "test_refresh_paper_valuations.py"
       - ".github/workflows/valuation-snapshot.yml"
       - ".github/heartbeat/valuation.txt"
 
@@ -39,6 +40,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: 验证估值读取重试边界
+        run: python -m unittest -v test_refresh_paper_valuations.py
       - name: 刷新PAPER账户估值
         run: python scripts/refresh_paper_valuations.py
       - name: 保存估值快照
