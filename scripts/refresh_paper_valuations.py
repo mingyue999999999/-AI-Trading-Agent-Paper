@@ -5,20 +5,33 @@ It never mutates trading account ledgers, positions, trades, strategy state,
 risk settings, wallets, keys, signatures, or order paths.
 """
 from __future__ import annotations
-import json, math, os, tempfile, urllib.parse, urllib.request
+import json, math, os, tempfile, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "state/valuations/latest.json"
+RETRYABLE_HTTP_CODES = {408, 429, 500, 502, 503, 504}
 
 def now_utc():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
-def get_json(url):
+def get_json(url, attempts=3, base_delay=0.5):
+    """Fetch JSON with bounded retries for transient public-data failures."""
+    if attempts < 1:
+        raise ValueError("attempts must be at least 1")
     req = urllib.request.Request(url, headers={"User-Agent": "Paper-Valuation-Heartbeat/2.0"})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.loads(r.read().decode("utf-8"))
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if exc.code not in RETRYABLE_HTTP_CODES or attempt == attempts:
+                raise
+        except (urllib.error.URLError, ConnectionError, TimeoutError, OSError, json.JSONDecodeError):
+            if attempt == attempts:
+                raise
+        time.sleep(base_delay * attempt)
 
 def okx_spot(symbol):
     inst=f"{symbol}-USDT"
