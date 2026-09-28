@@ -11,16 +11,16 @@
       "entry_confidence": 32.514415585116915,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 458.5643446086236,
+      "margin": 458.5766480122498,
       "initial_margin": 459.0479596309996,
       "notional_entry": 1377.1438788929988,
       "entry_fee": 0.6885719394464994,
-      "funding_pnl": -0.4836150223759196,
-      "last_funding_ts": 1790582400000,
+      "funding_pnl": -0.47131161874976735,
+      "last_funding_ts": 1790611200000,
       "best_price": 124.17500000000001,
       "stop_price": 117.96625,
       "take_profit": 128.64879225,
-      "liquidation_price": 78.44146388280342
+      "liquidation_price": 78.44041324216192
     }
   },
   "trades": [
@@ -488,13 +488,22 @@
       "rate": -2.6844711658e-06,
       "cashflow": 0.003733145603261151,
       "mark_price": 118.1
+    },
+    {
+      "time": "2026-09-28T16:19:12+00:00",
+      "symbol": "SOL",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": -8.7803539326e-06,
+      "cashflow": 0.012303403626152233,
+      "mark_price": 119.0
     }
   ],
   "realized_pnl": -10.728208149356089,
   "fees_paid": 3.4357699638968446,
   "peak_equity": 10141.562147052495,
-  "last_equity": 9998.477866530126,
-  "funding_pnl": -3.488424610462608,
+  "last_equity": 10013.915610738733,
+  "funding_pnl": -3.476121206836456,
   "liquidations": 0,
   "consecutive_losses": 1,
   "cooldown_until": null,
@@ -833,21 +842,21 @@
   "max_observed_drawdown": 0.01481052425737428,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-28T14:45:26.406000+00:00",
-    "valuation_epoch_ms": 1790606726406,
+    "valuation_at": "2026-09-28T16:20:32.575000+00:00",
+    "valuation_epoch_ms": 1790612432575,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "SOL": {
         "available": true,
-        "reference_mid": 118.09,
-        "price_epoch_ms": 1790606726307,
+        "reference_mid": 119.4,
+        "price_epoch_ms": 1790612432510,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 9998.477866530126,
+    "equity": 10013.915610738733,
     "not_realtime": true,
-    "current_drawdown": 0.014108702234197246,
+    "current_drawdown": 0.012586476763923438,
     "max_observed_drawdown": 0.01481052425737428,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
