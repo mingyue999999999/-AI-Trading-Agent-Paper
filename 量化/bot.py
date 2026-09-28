@@ -181,11 +181,21 @@ def equity(a, prices):
 def costs(value,c):return value*c["fee_rate"]
 
 def record_equity(a,prices,initial,timestamp_ms=None):
-    """Persist the mark-to-market snapshot and its high-water mark together."""
+    """Persist a coherent mark-to-market snapshot and compatibility mirrors."""
     eq=equity(a,prices)
     if eq is None:return None
+    observed_ms=int(time.time()*1000) if timestamp_ms is None else int(timestamp_ms)
     a["peak_equity"]=max(float(a.get("peak_equity",initial)),eq)
-    a["equity_curve"].append([int(time.time()*1000) if timestamp_ms is None else int(timestamp_ms),eq])
+    a["last_equity"]=eq
+    a["valuation"]={
+        "equity":eq,
+        "observed_at":datetime.fromtimestamp(observed_ms/1000,timezone.utc).isoformat(),
+        "status":"OBSERVED",
+        "source":"runtime execution quotes",
+        "prices":{s:float(prices[s]) for s in a["positions"]},
+        "paper_only":True,
+    }
+    a["equity_curve"].append([observed_ms,eq])
     return eq
 
 def portfolio_risk_state(a,c,prices,now):
