@@ -46,9 +46,16 @@ class TestBot(unittest.TestCase):
         eq=bot.record_equity(a,{"BTCUSDT":125},c["initial_cash"],timestamp_ms=123456)
         self.assertEqual(eq,10025)
         self.assertEqual(a["peak_equity"],10025)
+        self.assertEqual(a["last_equity"],10025)
+        self.assertEqual(a["valuation"]["equity"],10025)
+        self.assertEqual(a["valuation"]["observed_at"],"1970-01-01T00:02:03.456000+00:00")
+        self.assertEqual(a["valuation"]["prices"],{"BTCUSDT":125.0})
+        self.assertTrue(a["valuation"]["paper_only"])
         self.assertEqual(a["equity_curve"][-1],[123456,10025])
         bot.record_equity(a,{"BTCUSDT":90},c["initial_cash"],timestamp_ms=123457)
         self.assertEqual(a["peak_equity"],10025)
+        self.assertEqual(a["last_equity"],9990)
+        self.assertEqual(a["valuation"]["equity"],9990)
 
     def live_position(self, stop=90, target=120):
         c=bot.load_json(pathlib.Path(__file__).parents[1]/"config.json")
