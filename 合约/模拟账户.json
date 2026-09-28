@@ -1,27 +1,8 @@
 {
   "version": "V5 CLEAN FUTURES PAPER + ORDERFLOW SHADOW A/B",
   "created_at": "2026-09-19T08:05:59+00:00",
-  "cash": 9087.178798104054,
+  "cash": 9526.53045069211,
   "positions": {
-    "BNB": {
-      "side": "LONG",
-      "quantity": 1.778838508883381,
-      "entry_price": 772.9762949999999,
-      "entry_time": "2026-09-20T23:12:25+00:00",
-      "entry_confidence": 32.19690090801319,
-      "entry_coverage": 73.0,
-      "leverage": 3.0,
-      "margin": 455.8780476119967,
-      "initial_margin": 458.3333333333334,
-      "notional_entry": 1375.0000000000002,
-      "entry_fee": 0.6875000000000001,
-      "funding_pnl": -2.4552857213367676,
-      "last_funding_ts": 1790553600000,
-      "best_price": 805.1500000000001,
-      "stop_price": 764.8925,
-      "take_profit": 850.2739245,
-      "liquidation_price": 519.5553591371051
-    },
     "SOL": {
       "side": "LONG",
       "quantity": 11.775145652658068,
@@ -483,15 +464,30 @@
       "rate": -3.54821082819e-05,
       "cashflow": 0.0510434803449205,
       "mark_price": 122.17
+    },
+    {
+      "time": "2026-09-28T07:04:06+00:00",
+      "symbol": "BNB",
+      "event": "CLOSE",
+      "side": "LONG",
+      "price": 764.0677750000001,
+      "quantity": 1.778838508883381,
+      "notional": 1359.1531815668427,
+      "fee": 0.6795765907834214,
+      "liquidation_fee": 0.0,
+      "confidence": null,
+      "reason": "止损/移动止损",
+      "realized_pnl": -17.21389502394086,
+      "funding_pnl": -2.4552857213367676
     }
   ],
-  "realized_pnl": 6.485686874584772,
-  "fees_paid": 2.7561933731134234,
+  "realized_pnl": -10.728208149356089,
+  "fees_paid": 3.4357699638968446,
   "peak_equity": 10141.562147052495,
-  "last_equity": 10022.340585169404,
+  "last_equity": 10005.303717863064,
   "funding_pnl": -3.492157756065869,
   "liquidations": 0,
-  "consecutive_losses": 0,
+  "consecutive_losses": 1,
   "cooldown_until": null,
   "daily": {
     "2026-09-19": {
@@ -532,7 +528,7 @@
     },
     "2026-09-28": {
       "start_equity": 10076.2486950039,
-      "realized_pnl": 0.0
+      "realized_pnl": -17.21389502394086
     }
   },
   "_oi_snapshots": {},
@@ -828,27 +824,21 @@
   "max_observed_drawdown": 0.01481052425737428,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-09-28T05:16:13.688000+00:00",
-    "valuation_epoch_ms": 1790572573688,
+    "valuation_at": "2026-09-28T07:06:24.531000+00:00",
+    "valuation_epoch_ms": 1790579184531,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
-      "BNB": {
-        "available": true,
-        "reference_mid": 768.1,
-        "price_epoch_ms": 1790572573504,
-        "source": "OKX:mark-price"
-      },
       "SOL": {
         "available": true,
-        "reference_mid": 119.45,
-        "price_epoch_ms": 1790572573633,
+        "reference_mid": 118.67,
+        "price_epoch_ms": 1790579184473,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10022.340585169404,
+    "equity": 10005.303717863064,
     "not_realtime": true,
-    "current_drawdown": 0.011755739417101618,
+    "current_drawdown": 0.013435645043010758,
     "max_observed_drawdown": 0.01481052425737428,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
