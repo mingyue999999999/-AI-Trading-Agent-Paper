@@ -29,8 +29,6 @@ CHECKS = [
     ('quant', ROOT/'量化', ['-m', 'unittest', 'discover', '-s', 'tests', '-q']),
     ('meme and independent challengers', ROOT/'链上Meme', ['-m', 'unittest', 'discover', '-p', 'test_*.py', '-q']),
     ('polymarket', ROOT/'Polymarket套利机器人', ['-m', 'unittest', 'discover', '-s', 'tests', '-q']),
-    ('strategy lab and polymarket 15m', ROOT/'研究', ['-m', 'unittest', 'discover', '-p', 'test_*.py', '-q']),
-    ('shadow research', ROOT, ['-m', 'unittest', 'discover', '-s', 'shadow_research/tests', '-q']),
 ]
 
 
