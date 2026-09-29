@@ -10,8 +10,10 @@ import unittest
 ROOT = Path(__file__).resolve().parent
 WRITERS = (
     'spot-paper.yml', 'futures-paper.yml', 'meme-paper.yml', 'quant-paper.yml',
-    'polymarket-paper.yml', 'polymarket-shadow.yml', 'shadow-research.yml',
-    'strategy-research.yml',
+    'polymarket-paper.yml',
+)
+PRIVATE_RESEARCH_WORKFLOWS = (
+    'polymarket-shadow.yml', 'shadow-research.yml', 'strategy-research.yml',
 )
 FRESH_REF = "ref: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'main' || github.sha }}"
 
@@ -47,10 +49,10 @@ class StateCheckoutTests(unittest.TestCase):
                 self.assertNotIn('git push -f ', text)
                 self.assertNotIn('rebase -X ours', text)
 
-    def test_read_only_regression_keeps_default_pr_checkout(self):
-        text = (ROOT/'.github/workflows/cross-bot-regression.yml').read_text(encoding='utf-8')
-        self.assertNotIn(FRESH_REF, text)
-        self.assertIn('contents: read', text)
+    def test_private_research_workflows_stay_out_of_public_paper_repo(self):
+        for name in PRIVATE_RESEARCH_WORKFLOWS:
+            with self.subTest(workflow=name):
+                self.assertFalse((ROOT/'.github/workflows'/name).exists())
 
     def test_queued_event_sha_is_stale_but_main_preserves_previous_writer(self):
         # Local Git only: no real accounts, remote calls, or trading commands.

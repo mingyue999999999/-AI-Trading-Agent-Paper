@@ -63,6 +63,48 @@ def valid_price(value):
     except (TypeError,ValueError):return False
 
 
+def okx_market_data(coins):
+    """CoinGecko-compatible current market rows from public OKX spot tickers."""
+    rows=[];errors={}
+    now_ms=time.time()*1000
+    for coin_id,symbol in coins.items():
+        try:
+            row=okx('/api/v5/market/ticker',instId=symbol+'-USDT')[0]
+            price=float(row['last']);open24=float(row['open24h']);stamp=float(row['ts'])
+            if not valid_price(price) or not valid_price(open24):
+                raise ValueError('invalid ticker price')
+            if not -2000<=now_ms-stamp<=120000:
+                raise ValueError('stale or future ticker')
+            rows.append({'id':coin_id,'current_price':price,
+                         'price_change_percentage_24h':(price/open24-1)*100,
+                         '_source':'OKX:spot-ticker','_price_epoch_ms':int(stamp)})
+        except Exception as exc:
+            errors[symbol]=str(exc)
+    if len(rows)!=len(coins):
+        raise RuntimeError('OKX market fallback incomplete: '+str(errors))
+    return rows
+
+
+def okx_daily_history(symbol,minimum=201,limit=300):
+    """Closed UTC daily candles, oldest first, for technical indicators."""
+    rows=okx('/api/v5/market/history-candles',instId=symbol+'-USDT',
+             bar='1Dutc',limit=max(min(int(limit),300),minimum))
+    clean=[]
+    for row in rows:
+        try:
+            if len(row)<9 or str(row[8])!='1':continue
+            stamp=int(row[0]);close=float(row[4])
+            volume=float(row[7] or row[5])
+            if not valid_price(close) or not math.isfinite(volume) or volume<0:continue
+            clean.append((stamp,close,volume))
+        except (TypeError,ValueError,IndexError):
+            continue
+    clean=sorted({x[0]:x for x in clean}.values())
+    if len(clean)<minimum:
+        raise RuntimeError(f'insufficient OKX daily history for {symbol}: {len(clean)}')
+    return [x[1] for x in clean],[x[2] for x in clean]
+
+
 def fresh(observation,price_key='reference_mid',now_ms=None):
     try:
         now_ms=time.time()*1000 if now_ms is None else now_ms

@@ -87,14 +87,22 @@ def cg_json(url, retries=5):
 
 def get_market_data():
     ids = ",".join(COINS.keys())
-    return cg_json("https://api.coingecko.com/api/v3/coins/markets?"
-                   + urllib.parse.urlencode({"vs_currency":"usd","ids":ids,
-                                             "price_change_percentage":"24h"}))
+    try:
+        return cg_json("https://api.coingecko.com/api/v3/coins/markets?"
+                       + urllib.parse.urlencode({"vs_currency":"usd","ids":ids,
+                                                 "price_change_percentage":"24h"}))
+    except Exception as exc:
+        print("CoinGecko主行情降级至OKX：",exc)
+        return runtime.okx_market_data(COINS)
 
 def get_history(coin_id):
-    d = cg_json(f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart?"
-                + urllib.parse.urlencode({"vs_currency":"usd","days":365,"interval":"daily"}))
-    return [float(x[1]) for x in d["prices"]], [float(x[1]) for x in d["total_volumes"]]
+    try:
+        d = cg_json(f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart?"
+                    + urllib.parse.urlencode({"vs_currency":"usd","days":365,"interval":"daily"}))
+        return [float(x[1]) for x in d["prices"]], [float(x[1]) for x in d["total_volumes"]]
+    except Exception as exc:
+        print(f"CoinGecko历史行情降级至OKX {COINS[coin_id]}：",exc)
+        return runtime.okx_daily_history(COINS[coin_id])
 
 # ---------------- Technical ----------------
 def ema_series(v, p):

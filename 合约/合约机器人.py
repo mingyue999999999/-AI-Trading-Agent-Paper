@@ -117,23 +117,31 @@ def safe_json(url, headers=None, retries=2, quiet=False):
 
 def get_market_data():
     ids = ",".join(COINS.keys())
-    return get_json(
-        "https://api.coingecko.com/api/v3/coins/markets"
-        f"?vs_currency=usd&ids={urllib.parse.quote(ids)}"
-        "&price_change_percentage=24h", retries=5
-    )
+    try:
+        return get_json(
+            "https://api.coingecko.com/api/v3/coins/markets"
+            f"?vs_currency=usd&ids={urllib.parse.quote(ids)}"
+            "&price_change_percentage=24h", retries=5
+        )
+    except Exception as exc:
+        print("CoinGecko主行情降级至OKX：",exc)
+        return runtime.okx_market_data(COINS)
 
 
 def get_history(coin_id):
-    data = get_json(
-        f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart"
-        "?vs_currency=usd&days=365&interval=daily", retries=5
-    )
-    time.sleep(1.8)
-    return (
-        [float(x[1]) for x in data["prices"]],
-        [float(x[1]) for x in data["total_volumes"]],
-    )
+    try:
+        data = get_json(
+            f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart"
+            "?vs_currency=usd&days=365&interval=daily", retries=5
+        )
+        time.sleep(1.8)
+        return (
+            [float(x[1]) for x in data["prices"]],
+            [float(x[1]) for x in data["total_volumes"]],
+        )
+    except Exception as exc:
+        print(f"CoinGecko历史行情降级至OKX {COINS[coin_id]}：",exc)
+        return runtime.okx_daily_history(COINS[coin_id])
 
 
 # ============================================================

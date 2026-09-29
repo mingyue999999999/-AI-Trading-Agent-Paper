@@ -59,6 +59,32 @@ class RuntimeTests(unittest.TestCase):
             self.assertEqual(futures.http_get('https://api.coingecko.com/x'),'{}')
         self.assertEqual(clock[0],160);self.assertEqual(fetch.call_count,1)
 
+    def test_coingecko_denial_uses_okx_market_and_history(self):
+        market=[{'id':'bitcoin','current_price':100,
+                 'price_change_percentage_24h':1,'_source':'OKX:spot-ticker'}]
+        history=([100.0]*201,[10.0]*201)
+        for bot,primary in ((spot,'cg_json'),(futures,'get_json')):
+            with self.subTest(bot=bot.__name__), \
+                 mock.patch.object(bot,primary,side_effect=HTTPError('https://api.coingecko.com/x',403,'denied',{},None)), \
+                 mock.patch.object(rt,'okx_market_data',return_value=market) as current:
+                self.assertEqual(bot.get_market_data(),market)
+                current.assert_called_once_with(bot.COINS)
+            with self.subTest(bot=bot.__name__+' history'), \
+                 mock.patch.object(bot,primary,side_effect=RuntimeError('data source in cooldown')), \
+                 mock.patch.object(rt,'okx_daily_history',return_value=history) as daily:
+                self.assertEqual(bot.get_history('bitcoin'),history)
+                daily.assert_called_once_with('BTC')
+
+    def test_okx_fallback_rejects_stale_or_short_data(self):
+        stale={'last':'100','open24h':'99','ts':'0'}
+        with mock.patch.object(rt,'okx',return_value=[stale]):
+            with self.assertRaisesRegex(RuntimeError,'fallback incomplete'):
+                rt.okx_market_data({'bitcoin':'BTC'})
+        candles=[[str(i),'0','0','0','100','1','1','1','1'] for i in range(200)]
+        with mock.patch.object(rt,'okx',return_value=candles):
+            with self.assertRaisesRegex(RuntimeError,'insufficient OKX daily history'):
+                rt.okx_daily_history('BTC')
+
     def test_oi_baseline_is_preserved_in_explicit_independent_account(self):
         a=spot.new_account();a['_oi_snapshots']={'BTC':{'oi':100,'ts':100}}
         other=spot.new_account();before=copy.deepcopy(other)
