@@ -149,6 +149,21 @@ def snapshot(account,observations,futures=False,now_ms=None):
           'valuation_status':'OK' if eq is not None else 'UNAVAILABLE',
           'missing_symbols':missing,'price_observations':observations,
           'equity':eq,'not_realtime':True}
+    if futures:
+        if eq is None:
+            unrealized=None
+        else:
+            unrealized=sum(
+                (1 if position['side']=='LONG' else -1)*float(position['quantity'])
+                *(marks[symbol]-float(position['entry_price']))
+                for symbol,position in account['positions'].items()
+            )
+        account['unrealized_pnl']=unrealized
+        account['valuation']={
+            'equity':eq,'observed_at':stamp,
+            'status':'OBSERVED' if eq is not None else 'UNAVAILABLE',
+            'source':'runtime execution quotes','prices':marks,'paper_only':True,
+        }
     if eq is not None:
         account['peak_equity']=max(float(account.get('peak_equity',10000)),eq)
         dd=max(0,1-eq/account['peak_equity']) if account['peak_equity'] else 0
