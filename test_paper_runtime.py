@@ -129,6 +129,17 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(a['peak_equity'],10009)
         self.assertGreater(a['max_observed_drawdown'],0)
 
+    def test_spot_snapshot_refreshes_compatibility_valuation_field(self):
+        a=spot.new_account();a['cash']=9900
+        a['positions']={'BTC':dict(quantity=1,entry_price=100)}
+        a['valuation']={'equity':99999,'observed_at':'stale'}
+        eq,marks=rt.snapshot(a,{'BTC':self.gate(110)})
+        self.assertEqual(eq,10010)
+        self.assertEqual(a['valuation']['equity'],eq)
+        self.assertEqual(a['valuation']['prices'],marks)
+        self.assertEqual(a['valuation']['status'],'OBSERVED')
+        self.assertTrue(a['valuation']['paper_only'])
+
     def futures_account(self):
         a=futures.new_futures_account();a['cash']=9900
         a['positions']={'BTC':dict(side='LONG',quantity=1,entry_price=100,margin=100,initial_margin=100,
