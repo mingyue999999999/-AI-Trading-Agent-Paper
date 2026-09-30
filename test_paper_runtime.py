@@ -135,6 +135,31 @@ class RuntimeTests(unittest.TestCase):
               entry_fee=0,funding_pnl=0,last_funding_ts=0,best_price=100,stop_price=90,take_profit=120)}
         return a
 
+    def test_futures_snapshot_refreshes_compatibility_valuation_fields(self):
+        a=self.futures_account()
+        eq,marks=rt.snapshot(a,{'BTC':self.gate(110)},futures=True)
+        self.assertEqual(eq,10010)
+        self.assertEqual(marks,{'BTC':110})
+        self.assertEqual(a['unrealized_pnl'],10)
+        self.assertEqual(a['valuation']['equity'],eq)
+        self.assertEqual(a['valuation']['prices'],marks)
+        self.assertEqual(a['valuation']['status'],'OBSERVED')
+        self.assertTrue(a['valuation']['paper_only'])
+
+        a['positions']={};a['cash']=9990;a['unrealized_pnl']=123
+        eq,marks=rt.snapshot(a,{},futures=True)
+        self.assertEqual(eq,9990);self.assertEqual(marks,{})
+        self.assertEqual(a['unrealized_pnl'],0)
+        self.assertEqual(a['valuation']['equity'],9990)
+
+    def test_futures_snapshot_clears_stale_unrealized_when_mark_missing(self):
+        a=self.futures_account();a['unrealized_pnl']=123
+        eq,_=rt.snapshot(a,{'BTC':self.gate(110,age=31)},futures=True)
+        self.assertIsNone(eq)
+        self.assertIsNone(a['unrealized_pnl'])
+        self.assertEqual(a['valuation']['status'],'UNAVAILABLE')
+        self.assertIsNone(a['valuation']['equity'])
+
     def test_futures_close_does_not_double_count_margin_in_new_day(self):
         a=self.futures_account()
         futures.close_futures(a,'BTC',105,'test',None)
