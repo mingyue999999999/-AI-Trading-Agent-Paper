@@ -11,16 +11,16 @@
       "entry_confidence": 29.309914606643332,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 458.4303492777831,
+      "margin": 458.3447679000822,
       "initial_margin": 460.60927132731393,
       "notional_entry": 1381.8278139819417,
       "entry_fee": 0.6909139069909709,
-      "funding_pnl": -2.178922049530774,
-      "last_funding_ts": 1790928000000,
+      "funding_pnl": -2.2645034272316558,
+      "last_funding_ts": 1790956800000,
       "best_price": 782.3499999999999,
       "stop_price": 743.2324999999998,
       "take_profit": 842.7461625000001,
-      "liquidation_price": 514.7946901350023
+      "liquidation_price": 514.8424018090093
     },
     "BTC": {
       "side": "LONG",
@@ -30,16 +30,16 @@
       "entry_confidence": 28.361390201290163,
       "entry_coverage": 88.0,
       "leverage": 3.0,
-      "margin": 463.3396882659681,
+      "margin": 463.27478340102715,
       "initial_margin": 464.2139469564269,
       "notional_entry": 1392.6418408692807,
       "entry_fee": 0.6963209204346403,
-      "funding_pnl": -0.8742586904588852,
-      "last_funding_ts": 1790928000000,
+      "funding_pnl": -0.939163555399838,
+      "last_funding_ts": 1790956800000,
       "best_price": 86797.35,
       "stop_price": 82457.4825,
       "take_profit": 93061.4624775,
-      "liquidation_price": 56766.21068064202
+      "liquidation_price": 56770.175379558415
     }
   },
   "trades": [
@@ -1048,14 +1048,32 @@
       "rate": 7.09670858217e-05,
       "cashflow": -0.10139485809561702,
       "mark_price": 86795.4
+    },
+    {
+      "time": "2026-10-02T16:50:08+00:00",
+      "symbol": "BNB",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 6.1319798139e-05,
+      "cashflow": -0.0855813777008818,
+      "mark_price": 773.8
+    },
+    {
+      "time": "2026-10-02T16:50:08+00:00",
+      "symbol": "BTC",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 4.62739056724e-05,
+      "cashflow": -0.06490486494095282,
+      "mark_price": 85207.7
     }
   ],
   "realized_pnl": 73.14520797771542,
   "fees_paid": 8.356387375576585,
-  "funding_pnl": -6.274669523846305,
+  "funding_pnl": -6.42515576648814,
   "liquidations": 0,
   "peak_equity": 10254.824578775837,
-  "last_equity": 10123.563761120571,
+  "last_equity": 10088.348075638745,
   "consecutive_losses": 0,
   "cooldown_until": "2026-09-24T16:01:19+00:00",
   "daily": {
@@ -2610,40 +2628,40 @@
   "max_observed_drawdown": 0.023139287549158616,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-10-02T14:21:24.192000+00:00",
-    "valuation_epoch_ms": 1790950884192,
+    "valuation_at": "2026-10-02T16:52:24.886000+00:00",
+    "valuation_epoch_ms": 1790959944886,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "BNB": {
         "available": true,
-        "reference_mid": 780.6,
-        "price_epoch_ms": 1790950883894,
+        "reference_mid": 773.8,
+        "price_epoch_ms": 1790959944705,
         "source": "OKX:mark-price"
       },
       "BTC": {
         "available": true,
-        "reference_mid": 86544.5,
-        "price_epoch_ms": 1790950884087,
+        "reference_mid": 85159.4,
+        "price_epoch_ms": 1790959944831,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10123.563761120571,
+    "equity": 10088.348075638745,
     "not_realtime": true,
-    "current_drawdown": 0.012799908632950552,
+    "current_drawdown": 0.016233968885400962,
     "max_observed_drawdown": 0.023139287549158616,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
   },
-  "unrealized_pnl": 58.080457494125255,
+  "unrealized_pnl": 23.015258254941443,
   "valuation": {
-    "equity": 10123.563761120571,
-    "observed_at": "2026-10-02T14:21:24.192000+00:00",
+    "equity": 10088.348075638745,
+    "observed_at": "2026-10-02T16:52:24.886000+00:00",
     "status": "OBSERVED",
     "source": "runtime execution quotes",
     "prices": {
-      "BNB": 780.6,
-      "BTC": 86544.5
+      "BNB": 773.8,
+      "BTC": 85159.4
     },
     "paper_only": true
   }
