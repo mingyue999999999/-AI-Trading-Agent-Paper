@@ -1,22 +1,7 @@
 name: 链上Meme机器人模拟交易
 on:
+  # 已停运：只保留人工复核入口，不再被定时或代码推送触发。
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/meme-paper.yml"
-      - "链上Meme/链上Meme机器人.py"
-      - "链上Meme/new_launch_shadow.py"
-      - "链上Meme/run_new_launch_shadow.py"
-      - "链上Meme/外部信号复核.py"
-      - "链上Meme/gate_diagnostics.py"
-      - "链上Meme/test_gate_diagnostics.py"
-      - "链上Meme/test_external_evidence.py"
-      - "链上Meme/test_meme_bot.py"
-      - "链上Meme/test_new_launch_shadow.py"
-      - "链上Meme/test_profile_coverage.py"
-      - ".github/scripts/check_schedule_config.py"
-      - ".github/heartbeat/meme.txt"
 permissions:
   contents: write
 concurrency:
