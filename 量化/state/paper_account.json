@@ -1,20 +1,8 @@
 {
   "version": "1.0",
   "created_at": "2026-09-20T10:50:35.219869+00:00",
-  "cash": 8421.74925558512,
-  "positions": {
-    "BNBUSDT": {
-      "qty": 2.087305282946968,
-      "entry": 759.929775,
-      "cost": 1587.7916394602266,
-      "stop": 752.5642857142858,
-      "target": 811.7333464285714,
-      "highest": 776.95,
-      "entry_time": 1790586507133,
-      "decision_bar_epoch_ms": 1790568000000,
-      "signal": 0.636187825869737
-    }
-  },
+  "cash": 10047.927086993936,
+  "positions": {},
   "trades": [
     {
       "time": 1789876800000,
@@ -120,6 +108,18 @@
       "fee": 1.0175533661740566,
       "pnl": 72.64914614121551,
       "reason": "ATR_STOP",
+      "execution_price_source": "live_orderbook_mid"
+    },
+    {
+      "time": 1790917883039,
+      "decision_bar_epoch_ms": 1790899200000,
+      "symbol": "BNBUSDT",
+      "side": "SELL",
+      "price": 779.859875,
+      "qty": 2.087305282946968,
+      "fee": 1.627805637045862,
+      "pnl": 38.386191948589385,
+      "reason": "SIGNAL_EXIT",
       "execution_price_source": "live_orderbook_mid"
     }
   ],
@@ -891,17 +891,21 @@
     [
       1790907607154,
       10033.87949086921
+    ],
+    [
+      1790917883042,
+      10047.927086993936
     ]
   ],
   "peak_equity": 10206.553261428784,
   "day_start_equity": 10034.088221397506,
   "day": "2026-10-02",
   "last_bar": {
-    "BTCUSDT": 1790884800000,
-    "ETHUSDT": 1790884800000,
-    "SOLUSDT": 1790884800000,
-    "XRPUSDT": 1790884800000,
-    "BNBUSDT": 1790884800000
+    "BTCUSDT": 1790899200000,
+    "ETHUSDT": 1790899200000,
+    "SOLUSDT": 1790899200000,
+    "XRPUSDT": 1790899200000,
+    "BNBUSDT": 1790899200000
   },
   "execution_ab_signals": [
     {
@@ -1257,15 +1261,13 @@
       "observation_note": "Paper fill uses the contemporaneous OKX orderbook mid after the decision bar closed; not a historical bar-open fill."
     }
   ],
-  "last_equity": 10033.87949086921,
+  "last_equity": 10047.927086993936,
   "valuation": {
-    "equity": 10033.87949086921,
-    "observed_at": "2026-10-02T02:20:07.154000+00:00",
+    "equity": 10047.927086993936,
+    "observed_at": "2026-10-02T05:11:23.042000+00:00",
     "status": "OBSERVED",
     "source": "runtime execution quotes",
-    "prices": {
-      "BNBUSDT": 772.3499999999999
-    },
+    "prices": {},
     "paper_only": true
   }
 }
