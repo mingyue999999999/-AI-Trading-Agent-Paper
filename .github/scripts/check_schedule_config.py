@@ -1,6 +1,6 @@
 from pathlib import Path
 
-EXPECTED = {
+ACTIVE_SCHEDULES = {
     ".github/workflows/spot-paper.yml": [
         "workflow_dispatch:", "schedule:", 'cron: "7,37 * * * *"',
         'timezone: "Etc/UTC"', "group: spot-paper-trading-final",
@@ -11,17 +11,27 @@ EXPECTED = {
         'timezone: "Etc/UTC"', "group: futures-paper-trading-final",
         ".github/heartbeat/futures.txt", "github.event_name != 'pull_request'",
     ],
-    ".github/workflows/meme-paper.yml": [
-        "workflow_dispatch:", "schedule:", 'cron: "17,47 * * * *"',
-        'timezone: "Etc/UTC"', "group: meme-paper-final",
-        ".github/heartbeat/meme.txt", "github.event_name != 'pull_request'",
-    ],
 }
 
-for filename, required in EXPECTED.items():
+STOPPED_WORKFLOWS = {
+    ".github/workflows/meme-paper.yml",
+    ".github/workflows/polymarket-paper.yml",
+}
+
+for filename, required in ACTIVE_SCHEDULES.items():
     text = Path(filename).read_text(encoding="utf-8")
     missing = [item for item in required if item not in text]
     if missing:
         raise SystemExit(f"{filename} schedule safety check failed; missing: {missing}")
 
-print("all public PAPER schedules configuration check passed")
+for filename in STOPPED_WORKFLOWS:
+    text = Path(filename).read_text(encoding="utf-8")
+    if "workflow_dispatch:" not in text:
+        raise SystemExit(f"{filename} stopped-workflow check failed; manual review entry missing")
+    forbidden = [item for item in ("schedule:", "\n  push:") if item in text]
+    if forbidden:
+        raise SystemExit(
+            f"{filename} stopped-workflow check failed; unexpected automatic triggers: {forbidden}"
+        )
+
+print("active schedules and stopped PAPER workflows configuration check passed")
