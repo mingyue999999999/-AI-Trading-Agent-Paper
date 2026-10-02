@@ -15,8 +15,6 @@ COMPONENTS = {
     "spot": "spot-paper.yml",
     "futures": "futures-paper.yml",
     "quant": "quant-paper.yml",
-    "meme": "meme-paper.yml",
-    "polymarket": "polymarket-paper.yml",
     "valuation": "valuation-snapshot.yml",
 }
 
