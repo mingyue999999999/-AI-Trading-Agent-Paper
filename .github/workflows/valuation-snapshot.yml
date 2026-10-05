@@ -2,24 +2,6 @@ name: PAPER账户独立估值快照
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "5,35 * * * *"
-  workflow_run:
-    workflows:
-      - "现货机器人模拟交易"
-      - "合约机器人模拟交易"
-      - "稳健多策略量化机器人-模拟"
-      - "链上Meme机器人模拟交易"
-      - "Polymarket套利机器人模拟交易"
-    types: [completed]
-  push:
-    branches: [main]
-    paths:
-      - "scripts/refresh_paper_valuations.py"
-      - "test_refresh_paper_valuations.py"
-      - ".github/workflows/valuation-snapshot.yml"
-      - ".github/heartbeat/valuation.txt"
-
 permissions:
   contents: write
 
