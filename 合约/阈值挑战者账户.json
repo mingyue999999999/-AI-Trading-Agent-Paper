@@ -11,16 +11,16 @@
       "entry_confidence": 29.309914606643332,
       "entry_coverage": 73.0,
       "leverage": 3.0,
-      "margin": 458.0667835060357,
+      "margin": 457.92344824401977,
       "initial_margin": 460.60927132731393,
       "notional_entry": 1381.8278139819417,
       "entry_fee": 0.6909139069909709,
-      "funding_pnl": -2.542487821278174,
-      "last_funding_ts": 1791129600000,
+      "funding_pnl": -2.685823083294107,
+      "last_funding_ts": 1791158400000,
       "best_price": 795.75,
       "stop_price": 755.9625,
       "take_profit": 842.7461625000001,
-      "liquidation_price": 514.9973782903897
+      "liquidation_price": 515.0772877926522
     },
     "BTC": {
       "side": "LONG",
@@ -30,16 +30,16 @@
       "entry_confidence": 28.361390201290163,
       "entry_coverage": 88.0,
       "leverage": 3.0,
-      "margin": 463.060354627244,
+      "margin": 462.9598121994862,
       "initial_margin": 464.2139469564269,
       "notional_entry": 1392.6418408692807,
       "entry_fee": 0.6963209204346403,
-      "funding_pnl": -1.153592329182965,
-      "last_funding_ts": 1791129600000,
+      "funding_pnl": -1.2541347569407764,
+      "last_funding_ts": 1791158400000,
       "best_price": 86797.35,
       "stop_price": 82457.4825,
       "take_profit": 93061.4624775,
-      "liquidation_price": 56783.273712446666
+      "liquidation_price": 56789.41532378423
     }
   },
   "trades": [
@@ -1174,21 +1174,35 @@
       "rate": 4.79022334781e-05,
       "cashflow": -0.06720835123041419,
       "mark_price": 85232.5
+    },
+    {
+      "time": "2026-10-05T00:49:30+00:00",
+      "symbol": "BNB",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 0.0001,
+      "cashflow": -0.14333526201593283,
+      "mark_price": 794.7
+    },
+    {
+      "time": "2026-10-05T00:49:31+00:00",
+      "symbol": "BTC",
+      "event": "FUNDING",
+      "side": "LONG",
+      "rate": 7.05682759309e-05,
+      "cashflow": -0.10054242775781133,
+      "mark_price": 86552.1
     }
   ],
   "realized_pnl": 73.14520797771542,
   "fees_paid": 8.356387375576585,
-  "funding_pnl": -6.917568934317785,
+  "funding_pnl": -7.161446624091529,
   "liquidations": 0,
   "peak_equity": 10254.824578775837,
-  "last_equity": 10146.427639439065,
+  "last_equity": 10151.013202557026,
   "consecutive_losses": 0,
   "cooldown_until": "2026-09-24T16:01:19+00:00",
   "daily": {
-    "2026-09-21": {
-      "start_equity": 10063.667627352439,
-      "realized_pnl": 136.19710860817884
-    },
     "2026-09-22": {
       "start_equity": 10225.671276931222,
       "realized_pnl": 0.0
@@ -1239,6 +1253,10 @@
     },
     "2026-10-04": {
       "start_equity": 10104.936387576448,
+      "realized_pnl": 0.0
+    },
+    "2026-10-05": {
+      "start_equity": 10148.233411800578,
       "realized_pnl": 0.0
     }
   },
@@ -2740,40 +2758,40 @@
   "max_observed_drawdown": 0.023139287549158616,
   "runtime": {
     "schema_version": 1,
-    "valuation_at": "2026-10-04T23:38:15.608000+00:00",
-    "valuation_epoch_ms": 1791157095608,
+    "valuation_at": "2026-10-05T00:51:48.184000+00:00",
+    "valuation_epoch_ms": 1791161508184,
     "valuation_status": "OK",
     "missing_symbols": [],
     "price_observations": {
       "BNB": {
         "available": true,
-        "reference_mid": 794.5,
-        "price_epoch_ms": 1791157095430,
+        "reference_mid": 795.7,
+        "price_epoch_ms": 1791161507913,
         "source": "OKX:mark-price"
       },
       "BTC": {
         "available": true,
-        "reference_mid": 86449.5,
-        "price_epoch_ms": 1791157095554,
+        "reference_mid": 86611.4,
+        "price_epoch_ms": 1791161508095,
         "source": "OKX:mark-price"
       }
     },
-    "equity": 10146.427639439065,
+    "equity": 10151.013202557026,
     "not_realtime": true,
-    "current_drawdown": 0.010570335796978747,
+    "current_drawdown": 0.010123174260207923,
     "max_observed_drawdown": 0.023139287549158616,
     "drawdown_basis": "valid discrete snapshots; not full historical/tick maximum",
     "research_errors": []
   },
-  "unrealized_pnl": 81.58723522309144,
+  "unrealized_pnl": 86.41667603082564,
   "valuation": {
-    "equity": 10146.427639439065,
-    "observed_at": "2026-10-04T23:38:15.608000+00:00",
+    "equity": 10151.013202557026,
+    "observed_at": "2026-10-05T00:51:48.184000+00:00",
     "status": "OBSERVED",
     "source": "runtime execution quotes",
     "prices": {
-      "BNB": 794.5,
-      "BTC": 86449.5
+      "BNB": 795.7,
+      "BTC": 86611.4
     },
     "paper_only": true
   }
