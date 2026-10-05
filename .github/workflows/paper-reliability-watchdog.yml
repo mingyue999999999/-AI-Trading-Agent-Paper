@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   watchdog:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: ${{ false }} # ALL ROBOT WORK PAUSED BY USER 2026-10-05
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
