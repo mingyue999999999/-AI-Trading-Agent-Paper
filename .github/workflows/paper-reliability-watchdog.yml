@@ -2,19 +2,6 @@ name: PAPER核心可靠性看门狗
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/paper-reliability-watchdog.yml"
-      - ".github/scripts/paper_reliability_watchdog.py"
-  schedule:
-    - cron: "20,50 * * * *"
-      timezone: "Etc/UTC"
-  workflow_run:
-    workflows:
-      - "PAPER账户独立估值快照"
-    types: [completed]
-
 permissions:
   actions: write
   contents: read
