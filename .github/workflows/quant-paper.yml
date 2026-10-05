@@ -1,13 +1,6 @@
 name: 稳健多策略量化机器人-模拟
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/quant-paper.yml"
-      - ".github/heartbeat/quant.txt"
-      - "量化/**"
-  schedule:
-    - cron: "22,52 * * * *"
 permissions:
   contents: write
 concurrency:
