@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   paper:
-    if: github.ref == 'refs/heads/main'
+    if: ${{ false }} # ALL ROBOT WORK PAUSED BY USER 2026-10-05
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
